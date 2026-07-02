@@ -53,11 +53,15 @@ export const softSkills = {
                             type: 'interactionBox',
                             title: 'Soft Skills',
                             textLines:  [
-                                `- Creative`,
-                                `- Problem solver`,
-                                `- Teamwork`,
+                                `- Problem Solving`,
+                                `- Team Collaboration`,
+                                `- Communication`,
                                 `- Adaptability`,
-                                `- Curiosity`
+                                `- Continuous Learning`,
+                                `- Analytical Thinking`,
+                                `- Attention to Detail`,
+                                `- Ownership`,
+                                `- Time Management`
                             ],
                         },
                     ]

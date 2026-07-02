@@ -10,7 +10,6 @@ import carAnimations from "../sprites/car";
 import billboard from "../sprites/billboard";
 import fountain from "../sprites/fountain";
 import globe from "../sprites/globe";
-import buildingBillboard from "../sprites/buildingBillboard";
 import techskillsBillboard from "../sprites/techskillsBillboard";
 import { addActions } from "../../utils/actions";
 import * as interactions from "../interactions/index";
@@ -126,7 +125,7 @@ export const outside = {
       },
     }),
     techskillsBillboard: new GameObject({
-      x: getGridPosition(47),
+      x: getGridPosition(45.8),
       y: getGridPosition(12.5),
       hasShadow: false,
       width: getGridPosition(5),
@@ -214,7 +213,7 @@ export const outside = {
           events: [
             {
               type: "message",
-              text: `Professor: Hi Vasco, you're back! I kept your University Degree around. Let me see...`,
+              text: `Professor: Hi Yan Myo Aung, you're back! I kept your Computer Science Degree around. Let me see...`,
             },
             {
               type: "message",
@@ -222,16 +221,14 @@ export const outside = {
             },
             {
               type: "interactionBox",
-              title: "Computer Science Degree",
+              title:
+                "Computer Science Degree — NCC Education, Greenwich University",
               textLines: [
-                `- Algorithms and Data Scructures`,
-                `- Computers Architecture`,
-                `- Logical Programming`,
-                `- Databases`,
-                `- Algorithms Complexity`,
-                `- Web Technologies`,
-                `- Functional Programming`,
-                `- Unix based systems`,
+                `- Software Engineering`,
+                `- Data Structures & Algorithms`,
+                `- Database Systems`,
+                `- Object-Oriented Programming`,
+                `- Web Development`,
               ],
             },
           ],
@@ -242,22 +239,23 @@ export const outside = {
       },
     }),
     //PROFESSIONAL EXPERIENCE BUILDINGS
-    arkadiumBillboard: new GameObject({
-      x: getGridPosition(33),
+    passionGeekBillboard: new GameObject({
+      x: getGridPosition(33.5),
       y: getGridPosition(17.5),
       hasShadow: false,
       width: getGridPosition(6),
       height: getGridPosition(1),
       sprite: {
         object: {
-          src: "../images/objects/arkadium-billboard.png",
-          width: getGridPosition(6),
-          height: getGridPosition(2),
-          animations: buildingBillboard,
+          src: "../images/objects/passiongeek-billboard.png",
+          width: getGridPosition(5),
+          height: getGridPosition(1.5),
+          imageWidth: 73,
+          imageHeight: 23,
         },
       },
     }),
-    arkadium: new GameObject({
+    passionGeek: new GameObject({
       x: getGridPosition(33),
       y: getGridPosition(13),
       hasShadow: false,
@@ -275,7 +273,7 @@ export const outside = {
         },
       },
     }),
-    arkadiumInfo: new GameObject({
+    passionGeekInfo: new GameObject({
       x: getGridPosition(39),
       y: getGridPosition(19),
       hasShadow: false,
@@ -294,35 +292,42 @@ export const outside = {
       interactions: [
         {
           events: [
-            // {type: 'message', text: `I'm currently working at Farfetch since 2017. My job here is to create tools and features to maximize website performance and to help developers experience`}
             {
               type: "interactionBox",
-              title: "Arkadium (Dec 2024 - Present)",
+              title: "PassionGeek (Feb 2026 - Present)",
               textLines: [
-                `Arkadium specializes in developing premium online games for a broad audience, focusing on user-friendly, accessible games that emphasize quality and enjoyment.`,
-                `I joined Arkadium as a Senior Full Stack Developer to help create engaging browser-based game arenas, to build interactive, high-performance gaming experiences.`,
+                `PassionGeek is a software company focused on building modern digital solutions and applications.`,
+                `As a Frontend Developer at PassionGeek, I develop modern web applications using React, Next.js, and TypeScript while collaborating closely with backend engineers and designers.`,
+              ],
+            },
+            {
+              type: "interactionBox",
+              title: "PassionGeek (Feb 2026 - Present)",
+              textLines: [
+                `My focus is on building responsive user interfaces, integrating APIs, improving application performance, and delivering production-ready features that drive value for the business.`,
               ],
             },
           ],
         },
       ],
     }),
-    emmaBillboard: new GameObject({
-      x: getGridPosition(25),
+    gNextBillboard: new GameObject({
+      x: getGridPosition(25.5),
       y: getGridPosition(15.5),
       hasShadow: false,
       width: getGridPosition(6),
       height: getGridPosition(1),
       sprite: {
         object: {
-          src: "../images/objects/emma-billboard.png",
-          width: getGridPosition(6),
-          height: getGridPosition(2),
-          animations: buildingBillboard,
+          src: "../images/objects/gnext-billboard.png",
+          width: getGridPosition(5),
+          height: getGridPosition(1.5),
+          imageWidth: 73,
+          imageHeight: 23,
         },
       },
     }),
-    emma: new GameObject({
+    gNext: new GameObject({
       x: getGridPosition(25),
       y: getGridPosition(11),
       hasShadow: false,
@@ -347,7 +352,7 @@ export const outside = {
         src: "../images/doors/door-building.png",
       },
     }),
-    emmaInfo: new GameObject({
+    gNextInfo: new GameObject({
       x: getGridPosition(31),
       y: getGridPosition(19),
       hasShadow: false,
@@ -368,47 +373,40 @@ export const outside = {
           events: [
             {
               type: "interactionBox",
-              title: "Emma (Jul 2023 - Dec 2024)",
+              title: "G-Next (May 2024 - Jan 2026)",
               textLines: [
-                `Emma is a leading company in mattress and sleep market, dedicated to optimizing sleep quality through innovative, science-backed products. `,
-                `Focused on expanding global market reach while maintaining premium quality and optimizing the online shopping experience through robust, engaging web platforms.`,
+                `G-Next is a Japanese software company that develops modern web applications and digital solutions for clients across various industries.`,
+                `As a React / Next.js Developer at G-Next, I developed and maintained frontend applications using React and Next.js, delivering high-quality user interfaces for clients.`,
               ],
             },
             {
               type: "interactionBox",
-              title: "Emma (Jul 2023 - Dec 2024)",
+              title: "G-Next (May 2024 - Jan 2026)",
               textLines: [
-                `At Emma, I helped streamlining the rendering process, reducing generation time through optimized scripting and cache strategies.`,
-                `I worked closely with designers and product managers to develop and refine UI components that bring direct value to Emma’s website, ensuring a user-centric experience.`,
-              ],
-            },
-            {
-              type: "interactionBox",
-              title: "Emma (Jul 2023 - Dec 2024)",
-              textLines: [
-                `I also collaborated with backend teams to migrate a key service for delivery tracking, improving the site's functionality and data accuracy.`,
+                `In addition to frontend development, I occasionally contributed to backend services using NestJS, giving me valuable experience working across the full stack and collaborating with cross-functional teams.`,
               ],
             },
           ],
         },
       ],
     }),
-    farfetchBillboard: new GameObject({
-      x: getGridPosition(17),
+    hostMyanmarBillboard: new GameObject({
+      x: getGridPosition(17.5),
       y: getGridPosition(15.5),
       hasShadow: false,
       width: getGridPosition(6),
       height: getGridPosition(1),
       sprite: {
         object: {
-          src: "../images/objects/farfetch-billboard.png",
-          width: getGridPosition(6),
-          height: getGridPosition(2),
-          animations: buildingBillboard,
+          src: "../images/objects/hostmyanmar-billboard.png",
+          width: getGridPosition(5),
+          height: getGridPosition(1.5),
+          imageWidth: 73,
+          imageHeight: 23,
         },
       },
     }),
-    farfetch: new GameObject({
+    hostMyanmar: new GameObject({
       x: getGridPosition(17),
       y: getGridPosition(11),
       hasShadow: false,
@@ -433,7 +431,7 @@ export const outside = {
         src: "../images/doors/door-building.png",
       },
     }),
-    farfetchInfo: new GameObject({
+    hostMyanmarInfo: new GameObject({
       x: getGridPosition(23),
       y: getGridPosition(19),
       hasShadow: false,
@@ -454,154 +452,17 @@ export const outside = {
           events: [
             {
               type: "interactionBox",
-              title: "Farfetch (Sep 2017 - Jun 2023)",
+              title: "Host Myanmar (Sep 2023 - Apr 2024)",
               textLines: [
-                `Farfetch operates as a global luxury fashion platform that connects customers with high-end brands and boutiques through an advanced e-commerce site and marketplace.`,
-                `The company’s strategy revolves around offering a seamless, high-quality digital shopping experience with a strong focus on personalization and cutting-edge technology to meet the demands of luxury consumers.`,
+                `Host Myanmar is a technology company providing web development and digital services for businesses in Myanmar.`,
+                `As a Junior Developer at Host Myanmar, I was fully responsible for maintaining and developting new modules for the HR system project using Laravel, and also contributed to Livewire projects occassionally.`,
               ],
             },
             {
               type: "interactionBox",
-              title: "Farfetch (Sep 2017 - Jun 2023)",
+              title: "Host Myanmar (Sep 2023 - Apr 2024)",
               textLines: [
-                `As a Front-End Engineer at Farfetch, I maintained core TypeScript and JavaScript tools, managed containerized deployments, and implemented testing mechanisms to ensure smooth site functionality.`,
-                `Partnering with designers and product owners, I also helped create and optimize high-traffic React components, maintaining performance and stability.`,
-              ],
-            },
-          ],
-        },
-      ],
-    }),
-    dotlogicBillboard: new GameObject({
-      x: getGridPosition(9),
-      y: getGridPosition(16.5),
-      hasShadow: false,
-      width: getGridPosition(6),
-      height: getGridPosition(1),
-      sprite: {
-        object: {
-          src: "../images/objects/dotlogic-billboard.png",
-          width: getGridPosition(6),
-          height: getGridPosition(2),
-          animations: buildingBillboard,
-        },
-      },
-    }),
-    dotlogic: new GameObject({
-      x: getGridPosition(9),
-      y: getGridPosition(14),
-      hasShadow: false,
-      width: getGridPosition(6),
-      height: getGridPosition(4),
-      collisionOffset: {
-        width: 0,
-        height: getGridPosition(1),
-      },
-      sprite: {
-        object: {
-          src: "../images/objects/dotlogic.png",
-          width: 96,
-          height: 144,
-        },
-      },
-      door: {
-        offsetX: getGridPosition(2),
-        offsetY: getGridPosition(4.5),
-        src: "../images/doors/door-building.png",
-        width: getGridPosition(2),
-        height: getGridPosition(2),
-      },
-    }),
-    dotlogicInfo: new GameObject({
-      x: getGridPosition(15),
-      y: getGridPosition(18),
-      hasShadow: false,
-      width: getGridPosition(1),
-      height: getGridPosition(1),
-      sprite: {
-        object: {
-          src: "../images/objects/information.png",
-          width: 16,
-          height: 32,
-        },
-      },
-      interactionIcon: {
-        far: "../images/objects/interaction.png",
-      },
-      interactions: [
-        {
-          events: [
-            // {type: 'message', text: `I'm currently working at Farfetch since 2017. My job here is to create tools and features to maximize website performance and to help developers experience`}
-            {
-              type: "interactionBox",
-              title: "DotLogic (Sep 2016 - Sep 2017)",
-              textLines: [
-                `At Dotlogic, I worked as a developer for a year in 2016. The company specializes in developing medical software for hospitals, with a focus on cardiology.`,
-                `I began my time at Dotlogic as a professional intern, where I had the opportunity to create a tool using Javascript and Canvas to read and display ECG data on the page`,
-              ],
-            },
-            {
-              type: "interactionBox",
-              title: "DotLogic (Sep 2016 - Sep 2017)",
-              textLines: [
-                `After my internship, I was offered a full-time position at the company and continued to help improve various web tools.`,
-                `Working at Dotlogic provided me with valuable experience in the healthcare industry and solidified my skills in Javascript and web development.`,
-              ],
-            },
-          ],
-        },
-      ],
-    }),
-    blip: new GameObject({
-      x: getGridPosition(1),
-      y: getGridPosition(9),
-      hasShadow: false,
-      width: getGridPosition(6),
-      height: getGridPosition(10),
-      collisionOffset: {
-        width: 0,
-        height: getGridPosition(1),
-      },
-      sprite: {
-        object: {
-          src: "../images/objects/blip2.png",
-          width: getGridPosition(6),
-          height: getGridPosition(13),
-        },
-      },
-      door: {
-        offsetX: getGridPosition(2),
-        offsetY: getGridPosition(10.5),
-        src: "../images/doors/door-building.png",
-        width: getGridPosition(2),
-        height: getGridPosition(2),
-      },
-    }),
-    blipInfo: new GameObject({
-      x: getGridPosition(7),
-      y: getGridPosition(19),
-      hasShadow: false,
-      width: getGridPosition(1),
-      height: getGridPosition(1),
-      sprite: {
-        object: {
-          src: "../images/objects/information.png",
-          width: 16,
-          height: 32,
-        },
-      },
-      interactionIcon: {
-        far: "../images/objects/interaction.png",
-      },
-      interactions: [
-        {
-          events: [
-            {
-              type: "interactionBox",
-              title: "Blip (Summer internship - 3 months)",
-              textLines: [
-                `During my 3 months summer internship at Blip, I had the opportunity to work on a project to dynamically structure the front-end community documentation using JSDoc3`,
-                `This project allowed me to get some knowledge on Front End tools while working with Scrum for the first time`,
+                `My role involved debugging, implementing new functionality, and strengthening my foundation in web application development while delivering real-world solutions for clients.`,
               ],
             },
           ],
@@ -733,47 +594,24 @@ export const outside = {
         {
           events: [
             {
-              type: "message",
-              text: 'Winner in the category "Fun" at Make Or Break 2017 (Porto Summer Of Code) - 3 days hackathon',
+              type: "interactionBox",
+              title: "Projects & Achievements",
+              textLines: [
+                `Multi-tenant LMS: Designed and developed a SaaS learning platform with tenant isolation, authentication, role-based access control, and a scalable backend using NestJS and PostgreSQL.`,
+              ],
             },
-            {
-              type: "message",
-              text: "Our team created an application to rate public restrooms using sensors to detect if toilet paper is available",
-            },
-            {
-              type: "message",
-              text: "https://medium.com/makeorbreak-io/make-or-break-more-than-a-hackathon-45d43c0042ba",
-              isLink: true,
-            },
-          ],
-        },
-      ],
-    }),
-    signAndroid: new GameObject({
-      x: getGridPosition(63),
-      y: getGridPosition(15),
-      hasShadow: false,
-      width: getGridPosition(1),
-      height: getGridPosition(2),
-      sprite: {
-        object: {
-          src: "../images/objects/sign-android.png",
-          width: getGridPosition(1),
-          height: getGridPosition(3),
-        },
-      },
-      interactionIcon: {
-        far: "../images/objects/interaction.png",
-      },
-      interactions: [
-        {
-          events: [
             {
               type: "interactionBox",
-              title: "Android Development Course",
+              title: "Projects & Achievements",
               textLines: [
-                `In 2014 I applied to a 2 week Android course in Yekaterinburg with BEST - Board of European Students`,
-                `I ended up being chosen to participate and the aim of the course was to give students good knowledge of Android architecture and programming`,
+                `Telegram Reminder Bot: Built a Telegram bot that allows users to save links and receive scheduled reminders with configurable daily, weekly, or monthly notification frequencies.`,
+              ],
+            },
+            {
+              type: "interactionBox",
+              title: "Projects & Achievements",
+              textLines: [
+                `Claude Code Any Model: Created an open-source starter repository that simplifies configuring Claude Code to work with custom AI models through LiteLLM Proxy.`,
               ],
             },
           ],
@@ -802,7 +640,7 @@ export const outside = {
           events: [
             {
               type: "message",
-              text: "I love to travel and discover new places 🌍",
+              text: "I enjoy building personal projects, exploring AI and LLMs, and continuously learning about system design and cloud technologies",
             },
           ],
         },
@@ -823,49 +661,6 @@ export const outside = {
         },
       },
     }),
-    volunteer: new GameObject({
-      x: getGridPosition(57),
-      y: getGridPosition(4),
-      hasShadow: false,
-      width: getGridPosition(4),
-      height: getGridPosition(3),
-      collisionOffset: {
-        height: getGridPosition(1),
-        width: 0,
-      },
-      sprite: {
-        object: {
-          src: "../images/objects/volunteer.png",
-          width: getGridPosition(4),
-          height: getGridPosition(5),
-        },
-      },
-      interactionIcon: {
-        far: "../images/objects/interaction.png",
-      },
-      interactions: [
-        {
-          events: [
-            {
-              type: "interactionBox",
-              title: "ESN Porto (2015-2018)",
-              textLines: [
-                `As a volunteer for ESN - Erasmus Student Network I was responsible for integrating ERASMUS students into the city of Porto.`,
-                `This was accomplished by organizing trips and activities in partnership with several companies and instituions`,
-              ],
-            },
-            {
-              type: "interactionBox",
-              title: "ESN Porto (2015-2018)",
-              textLines: [
-                `My work helped to create a welcoming and inclusive environment for international students, and allowed them to fully experience and enjoy their time in Porto`,
-              ],
-            },
-          ],
-        },
-      ],
-    }),
-
     //TREES
     fountain: new GameObject({
       x: getGridPosition(50),
@@ -1073,50 +868,6 @@ export const outside = {
         ],
       },
     ],
-    [getGridCoord(12, 18)]: [
-      {
-        events: [
-          {
-            type: "message",
-            text: `I'm not allowed to enter the building since I don't work here anymore`,
-          },
-          { type: "walk", who: "miniMe", direction: "down" },
-        ],
-      },
-    ],
-    [getGridCoord(11, 18)]: [
-      {
-        events: [
-          {
-            type: "message",
-            text: `I'm not allowed to enter the building since I don't work here anymore`,
-          },
-          { type: "walk", who: "miniMe", direction: "down" },
-        ],
-      },
-    ],
-    [getGridCoord(3, 19)]: [
-      {
-        events: [
-          {
-            type: "message",
-            text: `I'm not allowed to enter the building since I don't work here anymore`,
-          },
-          { type: "walk", who: "miniMe", direction: "down" },
-        ],
-      },
-    ],
-    [getGridCoord(4, 19)]: [
-      {
-        events: [
-          {
-            type: "message",
-            text: `I'm not allowed to enter the building since I don't work here anymore`,
-          },
-          { type: "walk", who: "miniMe", direction: "down" },
-        ],
-      },
-    ],
     // [getGridCoord(35,19)]: [
     //     {
     //         events: [
@@ -1153,7 +904,10 @@ export const outside = {
       text: "Hello! 👋 Welcome to my Portfolio",
       showNote: true,
     },
-    { type: "message", text: `My name is Vasco and I'm a Front-end Developer` },
+    {
+      type: "message",
+      text: `My name is Yan Myo Aung and I'm a Full-Stack Developer from Myanmar`,
+    },
     {
       type: "message",
       text: (isMobile: boolean) => {

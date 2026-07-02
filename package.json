@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.config.js --mode production",
     "start": "webpack-dev-server --mode development"
   },
-  "author": "Vasco Ribeiro",
+  "author": "Yan Myo Aung",
   "license": "ISC",
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.1",

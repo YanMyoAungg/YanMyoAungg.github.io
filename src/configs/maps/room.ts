@@ -50,7 +50,7 @@ export const room = {
                 {
                     events: [{
                         type:'message',
-                        text: 'I like to play the piano for fun!',
+                        text: 'I enjoy building personal projects that solve real-world problems and exploring new developer tools!',
                     }]
                 }
             ],
@@ -75,7 +75,7 @@ export const room = {
                 {
                     events: [{
                         type:'message',
-                        text: '1st Place in Porto Summer of Code 2017',
+                        text: 'Built a multi-tenant SaaS Learning Management System with NestJS and PostgreSQL',
                     }]
                 }
             ],

@@ -5,7 +5,6 @@ import { techskills } from './maps/techskills';
 import { basket } from './maps/basket';
 import { beach } from './maps/beach';
 import { softSkills } from './maps/softSkills';
-import { farfetch } from './maps/farfetch';
 
 export const mapsConfig = {
     house,
@@ -14,6 +13,5 @@ export const mapsConfig = {
     techskills,
     basket,
     beach,
-    softSkills,
-    farfetch
+    softSkills
 }

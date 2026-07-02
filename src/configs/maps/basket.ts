@@ -60,7 +60,7 @@ export const basket = {
     },
     initialInteractions: [
         {type: 'walk', who: 'miniMe', direction: 'right'},
-        {type: 'message', text: 'I played basketball for 6 years'},
+        {type: 'message', text: 'Sports help me stay active and focused — a great way to recharge after coding!'},
         {type: 'walk', who: 'miniMe', direction: 'left'},
     ],
     keepInitialInteractions: true

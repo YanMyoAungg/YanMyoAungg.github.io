@@ -148,29 +148,7 @@ export const techskills = {
       ],
       label: "React",
     }),
-    avatareact: new GameObject({
-      x: getGridPosition(4),
-      y: getGridPosition(6),
-      hasShadow: false,
-      width: getGridPosition(2),
-      height: getGridPosition(2),
-      sprite: {
-        object: {
-          src: "../images/objects/react-avatar.png",
-          width: getGridPosition(2),
-          height: getGridPosition(3),
-          imageWidth: 32,
-          imageHeight: 48,
-        },
-      },
 
-      interactions: [
-        {
-          events: [{ type: "message", text: "React" }],
-        },
-      ],
-      label: "React",
-    }),
     avatarDevtools: new GameObject({
       x: getGridPosition(4),
       y: getGridPosition(6),
@@ -179,7 +157,7 @@ export const techskills = {
       height: getGridPosition(2),
       sprite: {
         object: {
-          src: "../images/objects/chromedev-avatar.png",
+          src: "../images/objects/nextjs-avatar.png",
           width: getGridPosition(2),
           height: getGridPosition(3),
           imageWidth: 32,
@@ -189,12 +167,12 @@ export const techskills = {
 
       interactions: [
         {
-          events: [{ type: "message", text: "Chrome DevTools" }],
+          events: [{ type: "message", text: "Next.js" }],
         },
       ],
-      label: "Dev Tools",
+      label: "Next.js",
     }),
-    avatarCss: new GameObject({
+    avatarTailwindCss: new GameObject({
       x: getGridPosition(8),
       y: getGridPosition(6),
       hasShadow: false,
@@ -202,7 +180,7 @@ export const techskills = {
       height: getGridPosition(2),
       sprite: {
         object: {
-          src: "../images/objects/css-avatar.png",
+          src: "../images/objects/tailwind-avatar.png",
           width: getGridPosition(2),
           height: getGridPosition(3),
           imageWidth: 32,
@@ -212,10 +190,10 @@ export const techskills = {
 
       interactions: [
         {
-          events: [{ type: "message", text: "CSS" }],
+          events: [{ type: "message", text: "Tailwind CSS" }],
         },
       ],
-      label: "CSS",
+      label: "Tailwind CSS",
     }),
     avatarTypescript: new GameObject({
       x: getGridPosition(11),
@@ -240,7 +218,7 @@ export const techskills = {
       ],
       label: "Typescript",
     }),
-    avatarWebpack: new GameObject({
+    avatarCloud: new GameObject({
       x: getGridPosition(2),
       y: getGridPosition(0),
       hasShadow: false,
@@ -248,7 +226,7 @@ export const techskills = {
       height: getGridPosition(2),
       sprite: {
         object: {
-          src: "../images/objects/webpack-avatar.png",
+          src: "../images/objects/cloud-avatar.png",
           width: getGridPosition(2),
           height: getGridPosition(3),
           imageWidth: 32,
@@ -258,20 +236,55 @@ export const techskills = {
 
       interactions: [
         {
-          events: [{ type: "message", text: "Webpack" }],
+          events: [
+            {
+              type: "message",
+              text: "Aws, Render, Railway, Digital Ocean, etc.",
+            },
+          ],
         },
       ],
-      label: "Webpack",
+      label: "Deployment",
     }),
+
+    avatarNest: new GameObject({
+      x: getGridPosition(5),
+      y: getGridPosition(0),
+      hasShadow: false,
+      width: getGridPosition(2),
+      height: getGridPosition(2),
+      sprite: {
+        object: {
+          src: "../images/objects/nestjs-avatar.png",
+          width: getGridPosition(2),
+          height: getGridPosition(3),
+          imageWidth: 32,
+          imageHeight: 48,
+        },
+      },
+
+      interactions: [
+        {
+          events: [
+            {
+              type: "message",
+              text: "Nest.js",
+            },
+          ],
+        },
+      ],
+      label: "Nest.js",
+    }),
+
     avatarJest: new GameObject({
-      x: getGridPosition(6),
+      x: getGridPosition(8),
       y: getGridPosition(0),
       hasShadow: false,
       width: getGridPosition(2),
       height: getGridPosition(2),
       sprite: {
         object: {
-          src: "../images/objects/jest-avatar.png",
+          src: "../images/objects/express-avatar.png",
           width: getGridPosition(2),
           height: getGridPosition(3),
           imageWidth: 32,
@@ -281,20 +294,20 @@ export const techskills = {
 
       interactions: [
         {
-          events: [{ type: "message", text: "Jest - Unit Tests" }],
+          events: [{ type: "message", text: "Express.js" }],
         },
       ],
-      label: "Jest",
+      label: "Express.js",
     }),
-    avatarPerformance: new GameObject({
-      x: getGridPosition(10),
+    avatarLaravel: new GameObject({
+      x: getGridPosition(11),
       y: getGridPosition(0),
       hasShadow: false,
       width: getGridPosition(2),
       height: getGridPosition(2),
       sprite: {
         object: {
-          src: "../images/objects/performance-avatar.png",
+          src: "../images/objects/laravel-avatar.png",
           width: getGridPosition(2),
           height: getGridPosition(3),
           imageWidth: 32,
@@ -304,10 +317,10 @@ export const techskills = {
 
       interactions: [
         {
-          events: [{ type: "message", text: "Website Performance" }],
+          events: [{ type: "message", text: "Laravel" }],
         },
       ],
-      label: "Performance",
+      label: "Laravel",
     }),
   },
   limits: {

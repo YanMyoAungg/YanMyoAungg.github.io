@@ -1,6 +1,8 @@
-# Retro Portfolio [https://vascofbribeiro.netlify.app/](https://vascofbribeiro.netlify.app/)
+# Retro Portfolio
 
-This project is a pixel art gamified Portfolio
+A pixel art gamified portfolio — walk around a virtual world and explore my skills, experience, and projects through a retro RPG-style experience.
+
+Built with TypeScript and Webpack.
 
 ## Getting Started
 
