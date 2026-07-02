@@ -562,7 +562,7 @@ export const outside = {
             },
             {
               type: "message",
-              text: `https://www.linkedin.com/in/yan-myo-aung-47730932a/`,
+              text: `https://www.linkedin.com/in/yan-myo-aung-3111b830a/`,
               isLink: true,
             },
           ],
