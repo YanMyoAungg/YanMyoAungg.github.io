@@ -145,7 +145,7 @@ export class ChatWidget {
 
     const avatar = document.createElement('div');
     avatar.classList.add('chat-avatar');
-    avatar.textContent = '\u{1F916}';
+    avatar.innerHTML = '<img src="./images/objects/animated_coffee.gif" alt="AI" class="chat-avatar-img" />';
 
     const bubble = document.createElement('p');
     bubble.classList.add('chat-message', 'assistant');
