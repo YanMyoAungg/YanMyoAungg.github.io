@@ -1,12 +1,10 @@
 import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Chat';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-// OpenRouter free models change frequently. If this stops working,
-// run: curl -s https://openrouter.ai/api/v1/models | python3 -c "
-// import json,sys; [print(m['id']) for m in json.load(sys.stdin)['data']
-// if m.get('pricing',{}).get('prompt')=='0']"
-// Alternatively, use 'openrouter/free' for auto-routing to any available free model.
-const DEFAULT_MODEL = 'meta-llama/llama-3.3-70b-instruct:free';
+// 'openrouter/free' auto-routes to any available free model.
+// The free model lineup changes frequently — if responses degrade,
+// pick a specific model from: curl -s https://openrouter.ai/api/v1/models
+const DEFAULT_MODEL = 'openrouter/free';
 const MAX_HISTORY = 10;
 const REQUEST_TIMEOUT_MS = 15_000;
 
@@ -89,7 +87,18 @@ export class ChatApi {
 
     if (!response.ok) {
       if (response.status === 429) {
-        throw new Error('The assistant is resting. Try again in a moment.');
+        const retryAfter = response.headers.get('Retry-After');
+        const waitTime = retryAfter
+          ? `Try again in ${retryAfter} seconds.`
+          : 'Try again in a moment.';
+        throw new Error(`The assistant is resting. ${waitTime}`);
+      }
+      // 401 = bad API key, 404 = bad model — surface the status
+      if (response.status === 401) {
+        throw new Error('Invalid API key. Check your OpenRouter key in src/configs/apiKey.ts.');
+      }
+      if (response.status === 404) {
+        throw new Error('AI model not found. The free model may have changed. Try updating DEFAULT_MODEL in src/utils/chatApi.ts.');
       }
       throw new Error('Connection lost. Please try again.');
     }
