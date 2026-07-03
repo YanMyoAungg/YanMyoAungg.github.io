@@ -1,3 +1,4 @@
 dist
 node_modules
 .superpowers/
+src/configs/apiKey.ts
