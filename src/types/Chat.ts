@@ -10,6 +10,7 @@ export interface OpenRouterRequest {
 
 export interface OpenRouterChoice {
   message: {
+    role: 'assistant';
     content: string;
   };
 }
