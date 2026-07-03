@@ -1,4 +1,4 @@
-<!-- src/configs/profile.md -->
+<!-- Edit this file with your own profile information. -->
 
 # Yan Myo Aung — Portfolio Profile
 

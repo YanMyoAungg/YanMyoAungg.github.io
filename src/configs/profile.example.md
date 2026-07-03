@@ -1,4 +1,4 @@
-<!-- src/configs/profile.example.md -->
+<!-- Copy this file to profile.md and edit with your own information. -->
 
 # Yan Myo Aung — Portfolio Profile
 
@@ -12,17 +12,6 @@ This file powers the AI chat assistant on your portfolio. Write everything the A
 - [Skill 2]
 - [Skill 3]
 
-## Experience
-### [Company Name] — [Your Role]
-[Dates you worked there]
-- [Key responsibility or achievement]
-- [Key responsibility or achievement]
-
-### [Company Name] — [Your Role]
-[Dates you worked there]
-- [Key responsibility or achievement]
-- [Key responsibility or achievement]
-
 ## Projects
 ### [Project Name]
 - [Brief description]
@@ -31,10 +20,6 @@ This file powers the AI chat assistant on your portfolio. Write everything the A
 ### [Project Name]
 - [Brief description]
 - [Technologies used]
-
-## Education
-### [Institution Name] — [Degree]
-[Dates]
 
 ## Links
 - LinkedIn: [URL]
