@@ -1,7 +1,7 @@
 import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Chat';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const DEFAULT_MODEL = 'google/gemini-2.0-flash-001';
+const DEFAULT_MODEL = 'google/gemini-2.5-flash-preview-05-20:free';
 const MAX_HISTORY = 10;
 const REQUEST_TIMEOUT_MS = 15_000;
 
