@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
@@ -37,6 +38,11 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __OPENROUTER_API_KEY__: JSON.stringify(
+        process.env.OPENROUTER_API_KEY || "",
+      ),
+    }),
     new HtmlWebpackPlugin({
       template: "public/index.html",
       hash: true, // Cache busting
