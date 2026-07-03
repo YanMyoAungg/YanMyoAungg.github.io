@@ -14,6 +14,10 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.md$/,
+        type: 'asset/source',
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         loader: "file-loader",
         options: {
