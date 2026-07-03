@@ -9,8 +9,11 @@ export class ChatWidget {
   private chatOverlay: HTMLElement | null;
   private messageList: HTMLElement | null;
   private inputField: HTMLInputElement | null;
+  private sendButton: HTMLElement | null;
   private activeTypewriter: Typewriter | null;
   private isOpen: boolean;
+  private isLoading: boolean;
+  private escapeHandler: ((e: KeyboardEvent) => void) | null;
 
   constructor(config: ChatWidgetConfig) {
     this.chatApi = new ChatApi(
@@ -23,8 +26,11 @@ export class ChatWidget {
     this.chatOverlay = null;
     this.messageList = null;
     this.inputField = null;
+    this.sendButton = null;
     this.activeTypewriter = null;
     this.isOpen = false;
+    this.isLoading = false;
+    this.escapeHandler = null;
   }
 
   public init(): void {
@@ -43,16 +49,17 @@ export class ChatWidget {
     this.chatOverlay = document.createElement('div');
     this.chatOverlay.classList.add('chat-overlay');
 
-    this.chatOverlay.innerHTML =
-      '<div class="chat-overlay-header">' +
-      '<span>Ask Me Anything</span>' +
-      '<button class="chat-close-button message-button">X</button>' +
-      '</div>' +
-      '<div class="chat-message-list"></div>' +
-      '<div class="chat-input-container">' +
-      '<input type="text" class="chat-input" placeholder="Ask about my skills, experience..." />' +
-      '<button class="chat-send-button">Send</button>' +
-      '</div>';
+    this.chatOverlay.innerHTML = `
+      <div class="chat-overlay-header">
+        <span>Ask Me Anything</span>
+        <button class="chat-close-button message-button">X</button>
+      </div>
+      <div class="chat-message-list"></div>
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" placeholder="Ask about my skills, experience..." />
+        <button class="chat-send-button">Send</button>
+      </div>
+    `;
 
     this.messageList = this.chatOverlay.querySelector(
       '.chat-message-list',
@@ -60,20 +67,20 @@ export class ChatWidget {
     this.inputField = this.chatOverlay.querySelector(
       '.chat-input',
     ) as HTMLInputElement;
+    this.sendButton = this.chatOverlay.querySelector('.chat-send-button');
 
     const closeButton = this.chatOverlay.querySelector('.chat-close-button');
     closeButton!.addEventListener('click', () => this.close());
 
-    const sendButton = this.chatOverlay.querySelector('.chat-send-button');
-    sendButton!.addEventListener('click', () => this.handleSend());
+    this.sendButton!.addEventListener('click', () => this.handleSend());
 
     this.inputField.addEventListener('keypress', (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
+        e.preventDefault();
         this.handleSend();
       }
     });
 
-    // Click outside the overlay to close
     this.chatOverlay.addEventListener('click', (e: MouseEvent) => {
       if (e.target === this.chatOverlay) {
         this.close();
@@ -82,12 +89,17 @@ export class ChatWidget {
   }
 
   private handleSend(): void {
+    if (this.isLoading) return;
+
     const text = this.inputField!.value.trim();
     if (!text) return;
 
     if (this.activeTypewriter && !this.activeTypewriter.isDone) {
       this.activeTypewriter.warpToDone();
     }
+
+    this.isLoading = true;
+    this.setInputEnabled(false);
 
     this.addMessage(text, 'user');
     this.inputField!.value = '';
@@ -103,7 +115,21 @@ export class ChatWidget {
       .catch((error) => {
         loadingMsg.remove();
         this.addMessage(error.message, 'assistant');
+      })
+      .finally(() => {
+        this.isLoading = false;
+        this.setInputEnabled(true);
+        this.inputField!.focus();
       });
+  }
+
+  private setInputEnabled(enabled: boolean): void {
+    if (this.inputField) {
+      this.inputField.disabled = !enabled;
+    }
+    if (this.sendButton) {
+      (this.sendButton as HTMLButtonElement).disabled = !enabled;
+    }
   }
 
   private addMessage(text: string, role: 'user' | 'assistant'): HTMLElement {
@@ -135,6 +161,13 @@ export class ChatWidget {
     this.createOverlay();
     this.gameContainer.appendChild(this.chatOverlay!);
 
+    this.escapeHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        this.close();
+      }
+    };
+    document.addEventListener('keydown', this.escapeHandler);
+
     setTimeout(() => this.inputField!.focus(), 100);
   }
 
@@ -146,12 +179,19 @@ export class ChatWidget {
       this.activeTypewriter.warpToDone();
     }
     this.activeTypewriter = null;
+    this.isLoading = false;
+
+    if (this.escapeHandler) {
+      document.removeEventListener('keydown', this.escapeHandler);
+      this.escapeHandler = null;
+    }
 
     if (this.chatOverlay) {
       this.chatOverlay.remove();
       this.chatOverlay = null;
       this.messageList = null;
       this.inputField = null;
+      this.sendButton = null;
     }
 
     this.chatApi.clearHistory();
