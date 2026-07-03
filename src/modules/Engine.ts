@@ -221,6 +221,20 @@ export default class Engine {
     });
   }
 
+  public bindChatEvents() {
+    document.addEventListener("ChatOpened", () => {
+      if (this._directionInput) {
+        this._directionInput.setDisabled(true);
+      }
+    });
+
+    document.addEventListener("ChatClosed", () => {
+      if (this._directionInput) {
+        this._directionInput.setDisabled(false);
+      }
+    });
+  }
+
   public startMap(mapName: string) {
     this._activeMap =
       this._maps[mapName] || new Map(window.mapsConfig[mapName]);
@@ -278,6 +292,7 @@ export default class Engine {
 
         this.bindAction();
         this.bindCheckCharacterPosition();
+        this.bindChatEvents();
 
         this._directionInput = new DirectionInput();
         this._directionInput.init();

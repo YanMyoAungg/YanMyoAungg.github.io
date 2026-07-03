@@ -81,6 +81,13 @@ export class ChatWidget {
       }
     });
 
+    this.inputField.addEventListener('keydown', (e: KeyboardEvent) => {
+      // Prevent WASD/arrow keys from triggering game movement while typing
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd'].includes(e.key)) {
+        e.stopPropagation();
+      }
+    });
+
     this.chatOverlay.addEventListener('click', (e: MouseEvent) => {
       if (e.target === this.chatOverlay) {
         this.close();
@@ -168,6 +175,8 @@ export class ChatWidget {
     };
     document.addEventListener('keydown', this.escapeHandler);
 
+    document.dispatchEvent(new CustomEvent('ChatOpened'));
+
     setTimeout(() => this.inputField!.focus(), 100);
   }
 
@@ -197,5 +206,7 @@ export class ChatWidget {
     this.chatApi.clearHistory();
 
     this.floatingIcon!.style.display = '';
+
+    document.dispatchEvent(new CustomEvent('ChatClosed'));
   }
 }
