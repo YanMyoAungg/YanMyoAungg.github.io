@@ -1,7 +1,12 @@
 import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Chat';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const DEFAULT_MODEL = 'google/gemini-2.5-flash-preview-05-20:free';
+// OpenRouter free models change frequently. If this stops working,
+// run: curl -s https://openrouter.ai/api/v1/models | python3 -c "
+// import json,sys; [print(m['id']) for m in json.load(sys.stdin)['data']
+// if m.get('pricing',{}).get('prompt')=='0']"
+// Alternatively, use 'openrouter/free' for auto-routing to any available free model.
+const DEFAULT_MODEL = 'meta-llama/llama-3.3-70b-instruct:free';
 const MAX_HISTORY = 10;
 const REQUEST_TIMEOUT_MS = 15_000;
 
