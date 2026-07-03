@@ -2,9 +2,6 @@ import { Typewriter } from './Typewriter';
 import { ChatApi } from '../utils/chatApi';
 import { ChatWidgetConfig } from '../types/Chat';
 
-const USER_AVATAR = '\u{1F464}'; // 👤
-const BOT_AVATAR = '\u{1F916}'; // 🤖
-
 export class ChatWidget {
   private chatApi: ChatApi;
   private gameContainer: HTMLElement;
@@ -45,7 +42,7 @@ export class ChatWidget {
   private createFloatingIcon(): void {
     this.floatingIcon = document.createElement('div');
     this.floatingIcon.classList.add('chat-floating-icon');
-    this.floatingIcon.textContent = BOT_AVATAR;
+    this.floatingIcon.textContent = 'AI';
     this.floatingIcon.addEventListener('click', () => this.open());
     this.gameContainer.appendChild(this.floatingIcon);
   }
@@ -142,7 +139,7 @@ export class ChatWidget {
 
     const avatar = document.createElement('span');
     avatar.classList.add('chat-avatar');
-    avatar.textContent = BOT_AVATAR;
+    avatar.textContent = 'AI';
 
     const dotsEl = document.createElement('span');
     dotsEl.classList.add('chat-loading-dots');
@@ -184,7 +181,7 @@ export class ChatWidget {
 
     const avatar = document.createElement('span');
     avatar.classList.add('chat-avatar');
-    avatar.textContent = role === 'user' ? USER_AVATAR : BOT_AVATAR;
+    avatar.textContent = role === 'user' ? 'YOU' : 'AI';
 
     const bubble = document.createElement('div');
     bubble.classList.add('chat-message', role);
