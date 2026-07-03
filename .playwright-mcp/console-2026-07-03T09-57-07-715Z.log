@@ -1,0 +1,29 @@
+[      45ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[      46ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:8417
+[    3075ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   50305ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   84212ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[   84212ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[   84213ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[   84213ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[   85229ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[   85230ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[   85230ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[   87310ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[   87310ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[   87310ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[   91379ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[   91380ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[   91380ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[   99477ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[   99477ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[   99477ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[  115502ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[  115503ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[  115503ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[  147514ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[  147514ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[  147514ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[  211572ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?815db8c7e17199650b53:5937
+[  211572ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6819
+[  211572ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811

@@ -1,0 +1,3 @@
+- generic [ref=f32e2]:
+  - button [ref=f32e4] [cursor=pointer]
+  - generic [ref=f32e5] [cursor=pointer]: 💬

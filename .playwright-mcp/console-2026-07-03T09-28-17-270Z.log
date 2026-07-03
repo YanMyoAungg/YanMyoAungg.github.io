@@ -1,0 +1,110 @@
+[      74ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[      75ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:8332
+[    3472ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   60741ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://openrouter.ai/api/v1/chat/completions:0
+[   63794ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   97544ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[   97544ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[   97544ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[   97544ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[   98568ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[   98568ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[   98569ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  100639ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  100640ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  100640ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  104697ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  104697ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  104698ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  112773ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  112773ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  112774ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  128874ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  128874ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  128874ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  160969ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  160969ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  160969ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  185719ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://openrouter.ai/api/v1/chat/completions:0
+[  188771ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  225058ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:5852
+[  225058ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6734
+[  225058ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  353089ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:6726
+[  353089ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:8332
+[  353093ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.a490e92fbd2e6e0e429d.hot-update.json:0
+[  353094ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:8334
+[  353094ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?a490e92fbd2e6e0e429d:8334
+[  353165ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:6738
+[  353166ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8344
+[  356198ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  361830ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:6738
+[  361957ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:6738
+[  361957ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8344
+[  361970ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8346
+[  361970ms] [WARNING] [HMR] Error: Aborted because ./src/modules/ChatWidget.ts is not accepted
+Update propagation: ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?c0137c074752c54ea7bc:9205:31)
+    at http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8890:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8889:15)
+    at http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8858:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8809:48)
+    at http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8856:24 @ http://localhost:3004/bundle.js?c0137c074752c54ea7bc:8346
+[  362036ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6739
+[  362037ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8345
+[  365085ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  382289ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6739
+[  382504ms] [ERROR] [webpack-dev-server] Errors while compiling. Reload prevented. @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6747
+[  382505ms] [ERROR] [webpack-dev-server] ERROR in ./src/modules/Engine.ts (/Users/yanmyoaung/Desktop/personal/virtual-curriculum/src/modules/Engine.ts) 281:13-27
+[tsl] ERROR in /Users/yanmyoaung/Desktop/personal/virtual-curriculum/src/modules/Engine.ts(281,14)
+      TS2339: Property 'bindChatEvents' does not exist on type 'Engine'. @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6747
+[  385508ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  394051ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6739
+[  394260ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:6739
+[  394260ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8345
+[  394269ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8347
+[  394269ms] [WARNING] [HMR] Error: Aborted because ./src/modules/Engine.ts is not accepted
+Update propagation: ./src/modules/Engine.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:9206:31)
+    at http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8891:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8890:15)
+    at http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8859:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8810:48)
+    at http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8857:24 @ http://localhost:3004/bundle.js?fcf3d4e99eee4ac7cc57:8347
+[  394353ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:6753
+[  394353ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8359
+[  397391ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  402256ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:6753
+[  402368ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:6753
+[  402369ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8359
+[  402380ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8361
+[  402380ms] [WARNING] [HMR] Error: Aborted because ./src/modules/ChatWidget.ts is not accepted
+Update propagation: ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:9220:31)
+    at http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8905:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8904:15)
+    at http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8873:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8824:48)
+    at http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8871:24 @ http://localhost:3004/bundle.js?2c4fcb12abfa6d714812:8361
+[  402496ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  402497ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:8362
+[  405545ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  437299ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:5882
+[  437299ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6764
+[  437299ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  437300ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  438373ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:5882
+[  438373ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6764
+[  438373ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  440462ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:5882
+[  440462ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6764
+[  440462ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  444466ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:5882
+[  444467ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6764
+[  444467ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756
+[  452473ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:5882
+[  452474ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6764
+[  452474ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?85a5c5c5d92bf769893d:6756

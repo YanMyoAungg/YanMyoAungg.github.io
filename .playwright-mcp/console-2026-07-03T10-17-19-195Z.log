@@ -1,0 +1,140 @@
+[      59ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[      59ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:8409
+[    3092ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[    7971ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[    7971ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[    7971ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[    7971ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[    9039ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[    9040ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[    9040ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[   11104ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[   11104ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[   11104ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[   15171ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[   15172ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[   15172ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[   23243ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[   23243ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[   23243ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[   39265ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[   39265ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[   39265ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[   71330ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[   71330ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[   71330ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[  135407ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[  135407ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:8409
+[  135410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.9e420e21614ffbadac82.hot-update.json:0
+[  135410ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:8411
+[  135410ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:8411
+[  135476ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  135477ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:8420
+[  138515ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  146107ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  146162ms] [INFO] [webpack-dev-server] Nothing changed. @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  189733ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  189819ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  189819ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:8420
+[  189832ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:8420
+[  189832ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:8420
+[  189935ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?5d28cd3beda2757b96ef:6814
+[  190052ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:6814
+[  190053ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:8420
+[  193130ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  195965ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:6814
+[  196053ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:6814
+[  196054ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:8420
+[  196067ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:8420
+[  196068ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:8420
+[  196070ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?f1a86ec4f382f4e3dbf3:6814
+[  196199ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:6814
+[  196200ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:8420
+[  199258ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  239021ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:6814
+[  239084ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:6814
+[  239084ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:8420
+[  239093ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:8420
+[  239093ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:8420
+[  239223ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?174cdfededf39ae7ce1d:6814
+[  239332ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?1348e77577db2c86e717:6814
+[  239333ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?1348e77577db2c86e717:8420
+[  242387ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  261761ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?1348e77577db2c86e717:6814
+[  261827ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?1348e77577db2c86e717:6814
+[  261827ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?1348e77577db2c86e717:8420
+[  261837ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?1348e77577db2c86e717:8420
+[  261837ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?1348e77577db2c86e717:8420
+[  261862ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?1348e77577db2c86e717:6814
+[  261937ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?f5af831473859bebd333:6814
+[  261938ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?f5af831473859bebd333:8420
+[  264983ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  309130ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?f5af831473859bebd333:6814
+[  309194ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?f5af831473859bebd333:6814
+[  309194ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?f5af831473859bebd333:8420
+[  309209ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?f5af831473859bebd333:8420
+[  309209ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?f5af831473859bebd333:8420
+[  309331ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?f5af831473859bebd333:6814
+[  309447ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:6814
+[  309448ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:8420
+[  312533ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  319699ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:6814
+[  319775ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:6814
+[  319775ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:8420
+[  319790ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?247817a8fca6532b0f4a:6814
+[  319958ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:6814
+[  319958ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:8420
+[  323021ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  357501ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:6814
+[  357566ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:6814
+[  357567ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:8420
+[  357572ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:8420
+[  357572ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:8420
+[  357703ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?4de9906ae9e5734dcfed:6814
+[  357873ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:6814
+[  357873ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:8420
+[  360923ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  367017ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:6814
+[  367103ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:6814
+[  367103ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:8420
+[  367113ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:8420
+[  367113ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:8420
+[  367116ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:6814
+[  367118ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?11c3ebe27386f6b743e6:6814
+[  367262ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?258e993f76013686c597:6814
+[  367262ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?258e993f76013686c597:8420
+[  370320ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  377971ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?258e993f76013686c597:6814
+[  378062ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?258e993f76013686c597:6814
+[  378062ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?258e993f76013686c597:8420
+[  378072ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?258e993f76013686c597:8420
+[  378072ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?258e993f76013686c597:8420
+[  378073ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?258e993f76013686c597:6814
+[  378073ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?258e993f76013686c597:6814
+[  378239ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:6814
+[  378240ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:8420
+[  381283ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  392210ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:6814
+[  392271ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:6814
+[  392271ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:8420
+[  392277ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:8420
+[  392277ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:8420
+[  392311ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?daf7270b7fbc9b6a71a0:6814
+[  392396ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6814
+[  392397ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:8420
+[  395455ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  438539ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:5940
+[  438539ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6822
+[  438540ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6814
+[  438540ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6814
+[  439632ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:5940
+[  439632ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6822
+[  439633ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6814
+[  441658ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:6814
+[  441659ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:8420
+[  441661ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.e4ed23ede6eaa47ed5e9.hot-update.json:0
+[  441661ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:8422
+[  441661ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?e4ed23ede6eaa47ed5e9:8422
+[  441724ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?14154927b35696df3589:6814
+[  441725ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?14154927b35696df3589:8420
+[  444755ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0

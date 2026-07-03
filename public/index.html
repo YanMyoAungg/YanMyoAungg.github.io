@@ -1,29 +1,16 @@
 <html>
     <head>
         <title>Yan Myo Aung | Portfolio</title>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="./images/favicon/favicon.ico"
-        />
+        <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
         <meta property="og:title" content="Yan Myo Aung | Portfolio" />
-        <meta
-            property="og:image"
-            content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png"
-        />
-        <meta
-            property="og:image:secure_url"
-            content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png"
-        />
-        <meta
-            name="twitter:image"
-            content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png"
-        />
+        <meta property="og:image" content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png" />
+        <meta property="og:image:secure_url" content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png" /> 
+        <meta name="twitter:image" content="https://user-images.githubusercontent.com/36052769/228215254-9183f587-f5a2-4622-bb6c-2c23496ddfa8.png" />
         <link rel="preload" as="image" href="../images/interfaces/sound.png" />
 
         <style>
             body {
-                font-family: Arial, Tahoma, Helvetica, sans-serif;
+                font-family: Arial, Tahoma, Helvetica, sans-serif
             }
 
             * {
@@ -33,38 +20,37 @@
 
             /* Avoid zoom on smartphone button clicks*/
             :root {
-                height: 100%;
+                height: 100% 
             }
 
             .loading-container {
                 position: absolute;
                 width: 80%;
-                top: 40%;
+                top:40%;
                 left: 10%;
                 text-align: center;
             }
 
             /* FIX THIS */
             .dot1 {
-                animation: dot-transition 0s ease-in 2s;
+                animation: dot-transition  0s ease-in 2s;
             }
 
             .dot2 {
                 animation: dot-transition 0s ease-in 4s;
             }
 
+
             .dot3 {
                 animation: dot-transition 0s ease-in 6s;
             }
 
             @keyframes dot-transition {
-                to {
-                    visibility: hidden;
-                }
+                to { visibility: hidden }
             }
 
             .loading-bar {
-                width: 100%;
+                width:100%;
                 height: 20px;
                 background-color: #333;
                 border: 4px solid #8b5a2b;
@@ -123,7 +109,7 @@
 
             .game-container canvas {
                 image-rendering: pixelated;
-                image-rendering: -moz-crisp-edges; /* Firefox */
+                image-rendering: -moz-crisp-edges;    /* Firefox */
                 image-rendering: -webkit-crisp-edges;
             }
 
@@ -147,8 +133,8 @@
                 display: none;
                 position: absolute;
                 opacity: 0.85;
-                left: 0;
-                right: 0;
+                left:0;
+                right:0; 
                 margin-left: auto;
                 margin-right: auto;
                 bottom: 30px;
@@ -160,7 +146,7 @@
                 background-color: #f3e5ab;
                 border: 3px solid #8b5a2b;
                 border-radius: 15px;
-                font-family: "Press Start 2P", sans-serif;
+                font-family: 'Press Start 2P', sans-serif;
                 color: #302a4a;
             }
             #helper-text {
@@ -173,12 +159,12 @@
                 right: 0;
                 bottom: 0;
                 height: 140px;
-                width: 100%;
+                width:100%;
                 padding: 8px;
                 background-color: #f3e5ab;
                 border: 3px solid #8b5a2b;
                 border-radius: 15px;
-                font-family: "Press Start 2P", sans-serif;
+                font-family: 'Press Start 2P', sans-serif;
                 color: #4d3b2e;
                 box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
                 overflow-y: scroll;
@@ -255,7 +241,7 @@
                 background-color: #f3e5ab;
                 border: 3px solid #8b5a2b;
                 border-radius: 15px;
-                font-family: "Press Start 2P", sans-serif;
+                font-family: 'Press Start 2P', sans-serif;
                 color: #4d3b2e;
                 text-align: center;
                 box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -387,10 +373,10 @@
                 margin-top: 60px;
                 margin-left: 100px;
                 border-radius: 50%;
-                font-size: 60px;
+                font-size: 60px
             }
 
-            @media (min-width: 992px) {
+            @media (min-width: 992px)  {
                 .gamepad {
                     display: none;
                 }
@@ -405,33 +391,26 @@
                 bottom: 0;
                 background: #fff;
                 opacity: 0;
-                animation: scene-transition-fade-in 0.2s forwards;
+                animation: scene-transition-fade-in  0.2s forwards;
             }
 
             .scene-transition.fade-out {
-                animation: scene-transition-fade-out 0.2s forwards;
+                animation: scene-transition-fade-out  0.2s forwards;
             }
 
             .scene-transition.rest.fade-out {
-                animation: scene-transition-fade-out 2s forwards;
+                animation: scene-transition-fade-out  2s forwards;
             }
 
             @keyframes scene-transition-fade-in {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
+                from { opacity: 0 }
+                to { opacity: 1 }
             }
 
+
             @keyframes scene-transition-fade-out {
-                from {
-                    opacity: 1;
-                }
-                to {
-                    opacity: 0;
-                }
+                from { opacity: 1 }
+                to { opacity: 0 }
             }
 
             .credits-container {
@@ -452,16 +431,11 @@
             }
 
             @keyframes scrollUp {
-                from {
-                    top: 100%;
-                }
-                to {
-                    top: -100%;
-                }
+                from { top: 100%; }
+                to { top: -100%; }
             }
 
-            .credits-content h2,
-            .credits-content p {
+            .credits-content h2, .credits-content p {
                 text-align: center;
                 margin-bottom: 1em;
                 text-shadow: 1px 1px 2px #000;
@@ -469,7 +443,7 @@
 
             .section-title {
                 font-size: 1.2rem;
-                color: #ffd700;
+                color: #FFD700;
                 text-shadow: 1px 1px 2px #000;
             }
 
@@ -481,244 +455,164 @@
             /* ---- Chat Widget ---- */
 
             .chat-floating-icon {
-                position: absolute;
-                bottom: 24px;
-                right: 24px;
-                width: 56px;
-                height: 56px;
-                background-color: #f3e5ab;
-                border: 3px solid #8b5a2b;
-                border-radius: 12px;
-                font-size: 28px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-                z-index: 10;
-                image-rendering: pixelated;
-                transition: transform 0.1s;
+              position: absolute;
+              bottom: 24px;
+              right: 24px;
+              width: 56px;
+              height: 56px;
+              background-color: #f3e5ab;
+              border: 3px solid #8b5a2b;
+              border-radius: 12px;
+              font-size: 28px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+              z-index: 10;
+              image-rendering: pixelated;
+              transition: transform 0.1s;
             }
 
             .chat-floating-icon:hover {
-                transform: scale(1.1);
+              transform: scale(1.1);
             }
 
             .chat-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5);
-                display: flex;
-                flex-direction: column;
-                z-index: 20;
-                border-radius: inherit;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              display: flex;
+              flex-direction: column;
+              z-index: 20;
+              border-radius: inherit;
             }
 
             .chat-overlay-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 8px 16px;
-                background-color: #f3e5ab;
-                border-bottom: 3px solid #8b5a2b;
-                font-family: "Press Start 2P", sans-serif;
-                font-size: 14px;
-                color: #4d3b2e;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 8px 16px;
+              background-color: #f3e5ab;
+              border-bottom: 3px solid #8b5a2b;
+              font-family: 'Press Start 2P', sans-serif;
+              font-size: 14px;
+              color: #4d3b2e;
             }
 
             .chat-message-list {
-                flex: 1;
-                overflow-y: auto;
-                padding: 12px 16px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
+              flex: 1;
+              overflow-y: auto;
+              padding: 12px 16px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
             }
 
             .chat-message-list::-webkit-scrollbar {
-                width: 6px;
+              width: 6px;
             }
 
             .chat-message-list::-webkit-scrollbar-thumb {
-                background-color: #7d7265;
+              background-color: #7d7265;
             }
 
             .chat-message {
-                margin: 0;
-                padding: 8px 12px;
-                border-radius: 8px;
-                font-family: "Press Start 2P", sans-serif;
-                font-size: 12px;
-                line-height: 1.6;
-                max-width: 85%;
-                word-wrap: break-word;
-            }
-
-            .chat-message-row {
-                display: flex;
-                align-items: flex-end;
-                gap: 8px;
-            }
-
-            .chat-message-row.assistant-row {
-                align-self: flex-start;
-                max-width: 85%;
-            }
-
-            .chat-message-row.user-row {
-                align-self: flex-end;
-                max-width: 85%;
-                flex-direction: row-reverse;
-            }
-
-            .chat-avatar {
-                width: 48px;
-                height: 32px;
-                border-radius: 6px;
-                border: 2px solid #8b5a2b;
-                background-color: #f3e5ab;
-                flex-shrink: 0;
-                overflow: hidden;
-                image-rendering: pixelated;
-                align-self: flex-end;
-            }
-
-            .chat-avatar-img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                image-rendering: pixelated;
+              margin: 0;
+              padding: 8px 12px;
+              border-radius: 8px;
+              font-family: 'Press Start 2P', sans-serif;
+              font-size: 12px;
+              line-height: 1.6;
+              max-width: 85%;
+              word-wrap: break-word;
             }
 
             .chat-message.user {
-                align-self: flex-end;
-                background-color: #8b5a2b;
-                color: #f3e5ab;
+              align-self: flex-end;
+              background-color: #8b5a2b;
+              color: #f3e5ab;
             }
 
             .chat-message.assistant {
-                align-self: flex-start;
-                background-color: #f3e5ab;
-                color: #4d3b2e;
-                border: 2px solid #8b5a2b;
+              align-self: flex-start;
+              background-color: #f3e5ab;
+              color: #4d3b2e;
+              border: 2px solid #8b5a2b;
             }
 
             .chat-message.assistant span {
-                opacity: 0;
+              opacity: 0;
             }
 
             .chat-message.assistant span.revealed {
-                opacity: 1;
-            }
-
-            /* ---- Loading dots animation ---- */
-            .chat-loading-dots {
-                display: inline;
-            }
-
-            .chat-loading-dots .dot {
-                display: inline-block;
-                animation: dot-bounce 1.4s infinite both;
-                font-family: "Press Start 2P", sans-serif;
-                font-size: 14px;
-                color: #4d3b2e;
-            }
-
-            .chat-loading-dots .dot:nth-child(1) {
-                animation-delay: 0s;
-            }
-            .chat-loading-dots .dot:nth-child(2) {
-                animation-delay: 0.2s;
-            }
-            .chat-loading-dots .dot:nth-child(3) {
-                animation-delay: 0.4s;
-            }
-
-            @keyframes dot-bounce {
-                0%,
-                80%,
-                100% {
-                    transform: translateY(0);
-                    opacity: 0.3;
-                }
-                40% {
-                    transform: translateY(-6px);
-                    opacity: 1;
-                }
+              opacity: 1;
             }
 
             .chat-input-container {
-                display: flex;
-                padding: 8px 12px;
-                background-color: #f3e5ab;
-                border-top: 3px solid #8b5a2b;
-                gap: 8px;
+              display: flex;
+              padding: 8px 12px;
+              background-color: #f3e5ab;
+              border-top: 3px solid #8b5a2b;
+              gap: 8px;
             }
 
             .chat-input {
-                flex: 1;
-                padding: 6px 10px;
-                border: 2px solid #8b5a2b;
-                border-radius: 4px;
-                font-family: "Press Start 2P", sans-serif;
-                font-size: 10px;
-                color: #4d3b2e;
-                background-color: #fff;
-                outline: none;
+              flex: 1;
+              padding: 6px 10px;
+              border: 2px solid #8b5a2b;
+              border-radius: 4px;
+              font-family: 'Press Start 2P', sans-serif;
+              font-size: 10px;
+              color: #4d3b2e;
+              background-color: #fff;
+              outline: none;
             }
 
             .chat-input::placeholder {
-                color: #bbb6ac;
+              color: #bbb6ac;
             }
 
             .chat-send-button {
-                padding: 6px 14px;
-                background-color: #8b5a2b;
-                color: #f3e5ab;
-                border: none;
-                border-radius: 4px;
-                font-family: "Press Start 2P", sans-serif;
-                font-size: 10px;
-                cursor: pointer;
+              padding: 6px 14px;
+              background-color: #8b5a2b;
+              color: #f3e5ab;
+              border: none;
+              border-radius: 4px;
+              font-family: 'Press Start 2P', sans-serif;
+              font-size: 10px;
+              cursor: pointer;
             }
 
             .chat-send-button:hover {
-                background-color: #6b4520;
+              background-color: #6b4520;
             }
 
             @media (max-width: 992px) {
-                .chat-floating-icon {
-                    width: 72px;
-                    height: 72px;
-                    font-size: 36px;
-                    bottom: 40px;
-                    right: 16px;
-                }
+              .chat-floating-icon {
+                width: 72px;
+                height: 72px;
+                font-size: 36px;
+                bottom: 40px;
+                right: 16px;
+              }
 
-                .chat-message {
-                    font-size: 14px;
-                }
+              .chat-message {
+                font-size: 14px;
+              }
 
-                .chat-input {
-                    font-size: 12px;
-                }
+              .chat-input {
+                font-size: 12px;
+              }
 
-                .chat-send-button {
-                    font-size: 12px;
-                }
-
-                .chat-avatar {
-                    width: 64px;
-                    height: 40px;
-                }
-
-                .chat-loading-dots .dot {
-                    font-size: 18px;
-                }
+              .chat-send-button {
+                font-size: 12px;
+              }
             }
+
         </style>
     </head>
     <body>
@@ -729,66 +623,40 @@
                     <p class="credit-item">Yan Myo Aung</p>
 
                     <h2 class="section-title">Original Project</h2>
-                    <p class="credit-item">
-                        Forked from Vasco Ribeiro's Retro Portfolio
-                    </p>
-                    <p class="credit-item">
-                        https://github.com/vascofbribeiro/virtual-curriculum
-                    </p>
+                    <p class="credit-item">Forked from Vasco Ribeiro's Retro Portfolio</p>
+                    <p class="credit-item">https://github.com/vascofbribeiro/virtual-curriculum</p>
 
                     <h2 class="section-title">Game Design & Development</h2>
-                    <p class="credit-item">
-                        Built with passion for code, creativity, and pixel art!
-                    </p>
-                    <p class="credit-item">
-                        https://github.com/YanMyoAungg/virtual-curriculum
-                    </p>
-
+                    <p class="credit-item">Built with passion for code, creativity, and pixel art!</p>
+                    <p class="credit-item">https://github.com/YanMyoAungg/virtual-curriculum</p>
+                
                     <h2 class="section-title">Pixel Art & Assets</h2>
-                    <p class="credit-item">
-                        Modern Interiors RPG Tileset - Limezu
-                    </p>
-                    <p class="credit-item">
-                        Modern Exteriors RPG Tileset - Limezu
-                    </p>
-                    <p class="credit-item">
-                        Limezu: <a>https://limezu.itch.io/</a>
-                    </p>
+                    <p class="credit-item">Modern Interiors RPG Tileset - Limezu</p>
+                    <p class="credit-item">Modern Exteriors RPG Tileset - Limezu</p>
+                    <p class="credit-item">Limezu: <a>https://limezu.itch.io/</a></p>
+                    
 
                     <h2 class="section-title">Sound Effects & Music</h2>
-                    <p class="credit-item">
-                        Background Sounds: Generated with Suno
-                    </p>
-
+                    <p class="credit-item">Background Sounds: Generated with Suno</p>
+                  
                     <h2 class="section-title">Special Thanks</h2>
-                    <p class="credit-item">
-                        To My Past Experiences & Projects: Inspiring each pixel!
-                    </p>
-                    <p class="credit-item">
-                        Friends & Family: For endless support and playtesting!
-                    </p>
-
+                    <p class="credit-item">To My Past Experiences & Projects: Inspiring each pixel!</p>
+                    <p class="credit-item">Friends & Family: For endless support and playtesting!</p>
+                
                     <h2 class="section-title">Thank You for Playing!</h2>
-                    <p class="credit-item">
-                        Explore, discover, and enjoy the journey through my tech
-                        adventures!
-                    </p>
+                    <p class="credit-item">Explore, discover, and enjoy the journey through my tech adventures!</p>
                 </div>
             </div>
             <div id="loading" class="loading-container">
-                LOADING<span class="dot1">.</span><span class="dot2">.</span
-                ><span class="dot3">.</span>
+                LOADING<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
                 <div class="loading-bar">
                     <div id="progress" class="progress"></div>
                 </div>
             </div>
             <canvas id="game-canvas"></canvas>
-            <button
-                id="btn-audio"
-                class="button-audio"
-                onclick="play()"
-            ></button>
+            <button id="btn-audio" class="button-audio" onclick="play()"></button>
             <div id="helper"><p id="helper-text"></p></div>
+            
         </div>
 
         <div class="gamepad">
@@ -798,66 +666,66 @@
                 <div class="arrow down"></div>
                 <div class="arrow right"></div>
                 <div id="inner-circle"></div>
-            </div>
-
+              </div>
+              
             <div class="buttons">
                 <div id="button-a" class="button a">A</div>
             </div>
         </div>
-
+        
         <script>
-            const audio = new Audio("../sounds/main.mp3");
+            const audio = new Audio('../sounds/main.mp3');
             const audioSet = new Audio();
-            const notificationSound = new Audio("../sounds/interaction.mp3");
+            const notificationSound = new Audio('../sounds/interaction.mp3');
             notificationSound.volume = 0.2;
             let isMuted = true;
             function play() {
-                const btnAudio = document.getElementById("btn-audio");
+                const btnAudio = document.getElementById('btn-audio');
                 btnAudio.blur();
                 audio.volume = 0.4;
                 audio.loop = true;
-                btnAudio.style.backgroundImage = audio.paused
-                    ? "url(../images/interfaces/sound.png)"
-                    : "url(../images/interfaces/sound-mute.png)";
+                btnAudio.style.backgroundImage = audio.paused ? 'url(../images/interfaces/sound.png)' :  'url(../images/interfaces/sound-mute.png)' 
                 isMuted ? audio.play() : audio.pause();
                 isMuted = !isMuted;
             }
 
-            document.addEventListener("CharacterDrunk", () => {
-                audio.src = "../sounds/drunk.mp3";
+            document.addEventListener('CharacterDrunk', () => {
+                audio.src = '../sounds/drunk.mp3';
                 audio.currentTime = 0;
                 !isMuted && audio.play();
             });
 
-            document.addEventListener("CharacterSober", () => {
-                audio.src = "../sounds/main.mp3";
+            document.addEventListener('CharacterSober', () => {
+                audio.src = '../sounds/main.mp3';
                 audio.currentTime = 0;
                 !isMuted && audio.play();
             });
 
-            document.addEventListener("Interaction", () => {
+            document.addEventListener('Interaction', () => {
                 !isMuted && notificationSound.play();
             });
 
-            document.addEventListener("ChangeMap", (event) => {
+            document.addEventListener('ChangeMap', (event)  => {
                 const previousSrc = audio.src;
-                switch (event.detail.map) {
-                    case "beach":
-                        audioSet.src = "../sounds/beach.mp3";
+                switch(event.detail.map) {
+                    case 'beach': 
+                        audioSet.src = '../sounds/beach.mp3';
                         break;
                     default:
-                        audioSet.src = "../sounds/main.mp3";
+                        audioSet.src = '../sounds/main.mp3';
                 }
 
                 // Don't restart song if it's the same
-                if (previousSrc !== audioSet.src) {
+                if(previousSrc !== audioSet.src) {
                     audio.src = audioSet.src;
                     audio.currentTime = 0;
-                    if (!isMuted) {
+                    if(!isMuted) {
                         audio.play();
                     }
                 }
-            });
+                
+                
+        });
         </script>
         <meta name="viewport" content="user-scalable=no" />
     </body>

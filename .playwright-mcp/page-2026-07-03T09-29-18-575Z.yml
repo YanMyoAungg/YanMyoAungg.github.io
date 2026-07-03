@@ -1,0 +1,16 @@
+- generic [ref=e2]:
+  - button [ref=e4] [cursor=pointer]
+  - generic [ref=e6]:
+    - paragraph [ref=e7]: Hello! 👋 Welcome to my Portfolio
+    - paragraph [ref=e8]: Press 'spacebar' to continue
+    - button "X" [ref=e9] [cursor=pointer]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: Ask Me Anything
+      - button "X" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]:
+      - paragraph [ref=e18]: Hello, what skills do you have?
+      - paragraph [ref=e19]: Connection lost. Please try again.
+    - generic [ref=e15]:
+      - textbox "Ask about my skills, experience..." [active] [ref=e16]
+      - button "Send" [ref=e17] [cursor=pointer]

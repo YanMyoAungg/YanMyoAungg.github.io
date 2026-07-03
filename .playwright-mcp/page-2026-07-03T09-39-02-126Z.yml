@@ -1,0 +1,9 @@
+- generic [ref=f10e2]:
+  - button [ref=f10e4] [cursor=pointer]
+  - generic [ref=f10e5]:
+    - generic [ref=f10e6]:
+      - generic [ref=f10e7]: Ask Me Anything
+      - button "X" [ref=f10e8] [cursor=pointer]
+    - generic [ref=f10e10]:
+      - textbox "Ask about my skills, experience..." [active] [ref=f10e11]
+      - button "Send" [ref=f10e12] [cursor=pointer]

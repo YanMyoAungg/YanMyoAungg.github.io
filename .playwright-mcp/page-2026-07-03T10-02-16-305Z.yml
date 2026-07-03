@@ -1,0 +1,6 @@
+- generic [ref=f21e2]:
+  - button [ref=f21e4] [cursor=pointer]
+  - generic [ref=f21e5] [cursor=pointer]: AI
+  - generic [ref=f21e6]:
+    - paragraph [ref=f21e7]: My name is Yan Myo Aung and I'm a Full-Stack Developer from Myanmar
+    - button "X" [ref=f21e8] [cursor=pointer]

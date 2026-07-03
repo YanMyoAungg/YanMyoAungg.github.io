@@ -1,0 +1,41 @@
+[      46ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[      46ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:8409
+[    3081ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   37280ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   62384ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   62384ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   62384ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   62384ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   63422ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   63422ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   63423ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   65488ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   65488ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   65488ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   69527ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   69527ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   69527ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   77556ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   77556ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   77556ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[   93596ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[   93596ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[   93597ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[  125633ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:5929
+[  125633ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6811
+[  125633ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[  190063ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:6803
+[  190064ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:8409
+[  190073ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.21c8b0ef6bdadf0fd5b5.hot-update.json:0
+[  190073ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:8411
+[  190073ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?21c8b0ef6bdadf0fd5b5:8411
+[  190147ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[  190148ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:8409
+[  193178ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  199755ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[  199755ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[  199755ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[  199755ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803
+[  200814ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:5929
+[  200814ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6811
+[  200814ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?9e420e21614ffbadac82:6803

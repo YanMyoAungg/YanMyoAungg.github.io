@@ -1,0 +1,19 @@
+[      84ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:6756
+[      84ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8362
+[    3112ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   95960ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:6756
+[   96221ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:6756
+[   96222ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8362
+[   96236ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8364
+[   96236ms] [WARNING] [HMR] Error: Aborted because ./src/modules/ChatWidget.ts is not accepted
+Update propagation: ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?fc36fe15b001c683cc31:9223:31)
+    at http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8908:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8907:15)
+    at http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8876:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8827:48)
+    at http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8874:24 @ http://localhost:3004/bundle.js?fc36fe15b001c683cc31:8364
+[   96353ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:6759
+[   96353ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8365
+[   99402ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0

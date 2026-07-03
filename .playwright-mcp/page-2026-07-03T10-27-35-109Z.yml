@@ -1,0 +1,12 @@
+- generic [ref=f48e2]:
+  - button [ref=f48e4] [cursor=pointer]
+  - generic [ref=f48e10]:
+    - paragraph [ref=f48e11]: My name is Yan Myo Aung and I'm a Full-Stack Developer from Myanmar
+    - button "X" [ref=f48e12] [cursor=pointer]
+  - generic [ref=f48e13]:
+    - generic [ref=f48e14]:
+      - generic [ref=f48e15]: Ask Me Anything
+      - button "X" [ref=f48e16] [cursor=pointer]
+    - generic [ref=f48e18]:
+      - textbox "Ask about my skills, experience..." [active] [ref=f48e19]
+      - button "Send" [ref=f48e20] [cursor=pointer]

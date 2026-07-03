@@ -111,7 +111,7 @@ export class ChatWidget {
     this.addMessage(text, 'user');
     this.inputField!.value = '';
 
-    const loadingMsg = this.createLoadingMessage();
+    const loadingMsg = this.addMessage('...', 'assistant');
 
     this.chatApi
       .sendMessage(text)
@@ -139,63 +139,24 @@ export class ChatWidget {
     }
   }
 
-  private createLoadingMessage(): HTMLElement {
-    const container = document.createElement('div');
-    container.classList.add('chat-message-row', 'assistant-row');
-
-    const avatar = document.createElement('div');
-    avatar.classList.add('chat-avatar');
-    avatar.innerHTML = '<img src="./images/objects/animated_coffee.gif" alt="AI" class="chat-avatar-img" />';
-
-    const bubble = document.createElement('p');
-    bubble.classList.add('chat-message', 'assistant');
-
-    const dots = document.createElement('span');
-    dots.classList.add('chat-loading-dots');
-    dots.innerHTML =
-      '<span class="dot">.</span>' +
-      '<span class="dot">.</span>' +
-      '<span class="dot">.</span>';
-    bubble.appendChild(dots);
-
-    container.appendChild(avatar);
-    container.appendChild(bubble);
-    this.messageList!.appendChild(container);
-    this.messageList!.scrollTop = this.messageList!.scrollHeight;
-
-    return container;
-  }
-
   private addMessage(text: string, role: 'user' | 'assistant'): HTMLElement {
-    const container = document.createElement('div');
-    container.classList.add('chat-message-row', `${role}-row`);
-
-    const bubble = document.createElement('p');
-    bubble.classList.add('chat-message', role);
-
-    if (role === 'assistant') {
-      const avatar = document.createElement('div');
-      avatar.classList.add('chat-avatar');
-      avatar.innerHTML = '<img src="./images/objects/animated_coffee.gif" alt="AI" class="chat-avatar-img" />';
-      container.appendChild(avatar);
-    }
-
-    container.appendChild(bubble);
-    this.messageList!.appendChild(container);
+    const messageEl = document.createElement('p');
+    messageEl.classList.add('chat-message', role);
+    this.messageList!.appendChild(messageEl);
     this.messageList!.scrollTop = this.messageList!.scrollHeight;
 
-    if (role === 'assistant') {
+    if (role === 'assistant' && text !== '...') {
       this.activeTypewriter = new Typewriter({
-        element: bubble,
+        element: messageEl,
         text,
         speed: 20,
       });
       this.activeTypewriter.init();
     } else {
-      bubble.textContent = text;
+      messageEl.textContent = text;
     }
 
-    return container;
+    return messageEl;
   }
 
   private open(): void {

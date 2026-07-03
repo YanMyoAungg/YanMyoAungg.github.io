@@ -1,0 +1,151 @@
+[      53ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:6759
+[      54ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8365
+[    3087ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   17523ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:6759
+[   17680ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:6759
+[   17681ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8365
+[   17687ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8367
+[   17688ms] [WARNING] [HMR] Error: Aborted because ./src/configs/apiKey.ts is not accepted
+Update propagation: ./src/configs/apiKey.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:9226:31)
+    at http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8911:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8910:15)
+    at http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8879:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8830:48)
+    at http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8877:24 @ http://localhost:3004/bundle.js?d8fd221a9bf195fb9b70:8367
+[   17775ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   17776ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:8365
+[   20805ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[   37063ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   37113ms] [INFO] [webpack-dev-server] Nothing changed. @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   70237ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:5885
+[   70237ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6767
+[   70237ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   70237ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   71304ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:5885
+[   71305ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6767
+[   71305ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   73319ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:5885
+[   73319ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6767
+[   73319ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   77415ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:5885
+[   77415ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6767
+[   77416ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[   85467ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:5885
+[   85468ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6767
+[   85468ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[  101527ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:6759
+[  101527ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:8365
+[  101535ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.ae63d6bbbcc3a7cd5b46.hot-update.json:0
+[  101535ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:8367
+[  101535ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?ae63d6bbbcc3a7cd5b46:8367
+[  101616ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:6759
+[  101616ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8365
+[  104644ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  318357ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:6759
+[  318641ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:6759
+[  318641ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8365
+[  318652ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8367
+[  318652ms] [WARNING] [HMR] Error: Aborted because ./src/utils/chatApi.ts is not accepted
+Update propagation: ./src/utils/chatApi.ts -> ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:9226:31)
+    at http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8911:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8910:15)
+    at http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8879:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8830:48)
+    at http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8877:24 @ http://localhost:3004/bundle.js?7e3c98ac11658fd9ef7d:8367
+[  318768ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:6759
+[  318769ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8365
+[  321888ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  519407ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:6759
+[  519613ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:6759
+[  519613ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8365
+[  519622ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8367
+[  519622ms] [WARNING] [HMR] Error: Aborted because ./src/utils/chatApi.ts is not accepted
+Update propagation: ./src/utils/chatApi.ts -> ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?e31ede98a27b958d6df3:9226:31)
+    at http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8911:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8910:15)
+    at http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8879:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8830:48)
+    at http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8877:24 @ http://localhost:3004/bundle.js?e31ede98a27b958d6df3:8367
+[  519722ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?11373534e7456924b22d:6764
+[  519723ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?11373534e7456924b22d:8370
+[  522832ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  571054ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?11373534e7456924b22d:6764
+[  571251ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?11373534e7456924b22d:6764
+[  571251ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?11373534e7456924b22d:8370
+[  571259ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?11373534e7456924b22d:8372
+[  571259ms] [WARNING] [HMR] Error: Aborted because ./src/utils/chatApi.ts is not accepted
+Update propagation: ./src/utils/chatApi.ts -> ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?11373534e7456924b22d:9231:31)
+    at http://localhost:3004/bundle.js?11373534e7456924b22d:8916:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?11373534e7456924b22d:8915:15)
+    at http://localhost:3004/bundle.js?11373534e7456924b22d:8884:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?11373534e7456924b22d:8835:48)
+    at http://localhost:3004/bundle.js?11373534e7456924b22d:8882:24 @ http://localhost:3004/bundle.js?11373534e7456924b22d:8372
+[  571358ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:6762
+[  571359ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8368
+[  574461ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  585838ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:6762
+[  585986ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:6762
+[  585986ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8368
+[  585999ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8370
+[  585999ms] [WARNING] [HMR] Error: Aborted because ./src/utils/chatApi.ts is not accepted
+Update propagation: ./src/utils/chatApi.ts -> ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:9229:31)
+    at http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8914:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8913:15)
+    at http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8882:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8833:48)
+    at http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8880:24 @ http://localhost:3004/bundle.js?88ee4e8913c0d10386e6:8370
+[  586080ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:6773
+[  586081ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8379
+[  589170ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[ 1045166ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:6773
+[ 1045283ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:6773
+[ 1045283ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8379
+[ 1045296ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8381
+[ 1045296ms] [WARNING] [HMR] Error: Aborted because ./src/modules/ChatWidget.ts is not accepted
+Update propagation: ./src/modules/ChatWidget.ts -> ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?3982c92a63303ed1ec46:9240:31)
+    at http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8925:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8924:15)
+    at http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8893:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8844:48)
+    at http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8891:24 @ http://localhost:3004/bundle.js?3982c92a63303ed1ec46:8381
+[ 1045376ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?f192eb428856973a3035:6811
+[ 1045377ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?f192eb428856973a3035:8417
+[ 1048432ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[ 1067120ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?f192eb428856973a3035:6811
+[ 1067194ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?f192eb428856973a3035:6811
+[ 1067307ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:6811
+[ 1067307ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:8417
+[ 1070340ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[ 1079676ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:6811
+[ 1079738ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:6811
+[ 1079738ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:8417
+[ 1079744ms] [LOG] [HMR] Nothing hot updated. @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:8417
+[ 1079744ms] [LOG] [HMR] App is up to date. @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:8417
+[ 1079776ms] [INFO] [webpack-dev-server] "/Users/yanmyoaung/Desktop/personal/virtual-curriculum/public/index.html" from static directory was changed. Reloading... @ http://localhost:3004/bundle.js?78860afb483c4e82bea5:6811
+[ 1079850ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:6811
+[ 1079851ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:8417
+[ 1082890ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[ 1097495ms] [ERROR] WebSocket connection to 'ws://localhost:3004/ws' failed:  @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:5937
+[ 1097495ms] [ERROR] [webpack-dev-server] Event @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:6819
+[ 1097495ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:6811
+[ 1097495ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:6811
+[ 1099188ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:6811
+[ 1099188ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:8417
+[ 1099222ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/main.910e9f14dc7f601e509e.hot-update.json:0
+[ 1099222ms] [WARNING] [HMR] Cannot find update. Need to do a full reload! @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:8419
+[ 1099222ms] [WARNING] [HMR] (Probably because of restarting the webpack-dev-server) @ http://localhost:3004/bundle.js?910e9f14dc7f601e509e:8419
+[ 1099347ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?815db8c7e17199650b53:6811
+[ 1099347ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?815db8c7e17199650b53:8417
+[ 1102379ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0

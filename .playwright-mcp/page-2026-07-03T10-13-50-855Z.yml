@@ -1,0 +1,7 @@
+- generic [ref=f30e2]:
+  - button [ref=f30e4] [cursor=pointer]
+  - generic [ref=f30e5] [cursor=pointer]: 💬
+  - generic [ref=f30e6]:
+    - paragraph [ref=f30e7]: Hello! 👋 Welcome to my Portfolio
+    - paragraph [ref=f30e8]: Press 'spacebar' to continue
+    - button "X" [ref=f30e9] [cursor=pointer]
