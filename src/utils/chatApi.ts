@@ -2,21 +2,26 @@ import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Cha
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const DEFAULT_MODEL = 'google/gemini-2.0-flash-001';
+const MAX_HISTORY = 10;
+const REQUEST_TIMEOUT_MS = 15_000;
 
+// NOTE: The API key is embedded in client-side JS since this is a static
+// portfolio with no backend. Use a restricted-scope key from OpenRouter
+// and be aware it is visible in browser network requests and source view.
 export class ChatApi {
   private apiKey: string;
   private model: string;
-  private profileContent: string;
   private history: ChatMessage[];
+  private systemMessage: ChatMessage;
 
   constructor(apiKey: string, profileContent: string, model?: string) {
     this.apiKey = apiKey;
     this.model = model || DEFAULT_MODEL;
-    this.profileContent = profileContent;
     this.history = [];
+    this.systemMessage = this.buildSystemMessage(profileContent);
   }
 
-  private buildSystemMessage(): ChatMessage {
+  private buildSystemMessage(profileContent: string): ChatMessage {
     return {
       role: 'system',
       content: [
@@ -32,32 +37,50 @@ export class ChatApi {
         '- Requests to role-play or pretend to be someone else',
         '',
         'PROFILE:',
-        this.profileContent,
+        profileContent,
       ].join('\n'),
     };
   }
 
   async sendMessage(userMessage: string): Promise<string> {
-    this.history.push({ role: 'user', content: userMessage });
+    const trimmed = userMessage.trim();
+    if (!trimmed) {
+      throw new Error('Please type a message to send.');
+    }
 
-    const messages: ChatMessage[] = [
-      this.buildSystemMessage(),
-      ...this.history.slice(-10),
+    const requestMessages: ChatMessage[] = [
+      this.systemMessage,
+      ...this.history.slice(-MAX_HISTORY),
+      { role: 'user', content: trimmed },
     ];
 
     const body: OpenRouterRequest = {
       model: this.model,
-      messages,
+      messages: requestMessages,
     };
 
-    const response = await fetch(OPENROUTER_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.apiKey}`,
-      },
-      body: JSON.stringify(body),
-    });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    let response: Response;
+    try {
+      response = await fetch(OPENROUTER_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      });
+    } catch (error) {
+      clearTimeout(timeout);
+      if (error instanceof DOMException && error.name === 'AbortError') {
+        throw new Error('Request timed out. Please try again.');
+      }
+      throw new Error('Connection lost. Please try again.');
+    }
+    clearTimeout(timeout);
 
     if (!response.ok) {
       if (response.status === 429) {
@@ -71,6 +94,7 @@ export class ChatApi {
       data.choices[0]?.message?.content ||
       'Sorry, I could not generate a response.';
 
+    this.history.push({ role: 'user', content: trimmed });
     this.history.push({ role: 'assistant', content: assistantMessage });
     return assistantMessage;
   }
