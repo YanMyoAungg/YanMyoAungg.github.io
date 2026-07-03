@@ -2,6 +2,9 @@ import { Typewriter } from './Typewriter';
 import { ChatApi } from '../utils/chatApi';
 import { ChatWidgetConfig } from '../types/Chat';
 
+const USER_AVATAR = '\u{1F464}'; // 👤
+const BOT_AVATAR = '\u{1F916}'; // 🤖
+
 export class ChatWidget {
   private chatApi: ChatApi;
   private gameContainer: HTMLElement;
@@ -14,6 +17,7 @@ export class ChatWidget {
   private isOpen: boolean;
   private isLoading: boolean;
   private escapeHandler: ((e: KeyboardEvent) => void) | null;
+  private loadingDotsInterval: ReturnType<typeof setInterval> | null;
 
   constructor(config: ChatWidgetConfig) {
     this.chatApi = new ChatApi(
@@ -31,6 +35,7 @@ export class ChatWidget {
     this.isOpen = false;
     this.isLoading = false;
     this.escapeHandler = null;
+    this.loadingDotsInterval = null;
   }
 
   public init(): void {
@@ -40,7 +45,7 @@ export class ChatWidget {
   private createFloatingIcon(): void {
     this.floatingIcon = document.createElement('div');
     this.floatingIcon.classList.add('chat-floating-icon');
-    this.floatingIcon.textContent = '\u{1F4AC}';
+    this.floatingIcon.textContent = BOT_AVATAR;
     this.floatingIcon.addEventListener('click', () => this.open());
     this.gameContainer.appendChild(this.floatingIcon);
   }
@@ -82,7 +87,6 @@ export class ChatWidget {
     });
 
     this.inputField.addEventListener('keydown', (e: KeyboardEvent) => {
-      // Prevent WASD/arrow keys from triggering game movement while typing
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd'].includes(e.key)) {
         e.stopPropagation();
       }
@@ -111,16 +115,18 @@ export class ChatWidget {
     this.addMessage(text, 'user');
     this.inputField!.value = '';
 
-    const loadingMsg = this.addMessage('...', 'assistant');
+    const loadingRow = this.addLoadingDots();
 
     this.chatApi
       .sendMessage(text)
       .then((response) => {
-        loadingMsg.remove();
+        this.clearLoadingDots();
+        loadingRow.remove();
         this.addMessage(response, 'assistant');
       })
       .catch((error) => {
-        loadingMsg.remove();
+        this.clearLoadingDots();
+        loadingRow.remove();
         this.addMessage(error.message, 'assistant');
       })
       .finally(() => {
@@ -128,6 +134,39 @@ export class ChatWidget {
         this.setInputEnabled(true);
         this.inputField!.focus();
       });
+  }
+
+  private addLoadingDots(): HTMLElement {
+    const row = document.createElement('div');
+    row.classList.add('chat-message-row', 'assistant');
+
+    const avatar = document.createElement('span');
+    avatar.classList.add('chat-avatar');
+    avatar.textContent = BOT_AVATAR;
+
+    const dotsEl = document.createElement('span');
+    dotsEl.classList.add('chat-loading-dots');
+    dotsEl.textContent = '...';
+
+    row.appendChild(avatar);
+    row.appendChild(dotsEl);
+    this.messageList!.appendChild(row);
+    this.messageList!.scrollTop = this.messageList!.scrollHeight;
+
+    let frame = 0;
+    this.loadingDotsInterval = setInterval(() => {
+      frame = (frame + 1) % 4;
+      dotsEl.textContent = '.'.repeat(frame);
+    }, 400);
+
+    return row;
+  }
+
+  private clearLoadingDots(): void {
+    if (this.loadingDotsInterval) {
+      clearInterval(this.loadingDotsInterval);
+      this.loadingDotsInterval = null;
+    }
   }
 
   private setInputEnabled(enabled: boolean): void {
@@ -140,23 +179,33 @@ export class ChatWidget {
   }
 
   private addMessage(text: string, role: 'user' | 'assistant'): HTMLElement {
-    const messageEl = document.createElement('p');
-    messageEl.classList.add('chat-message', role);
-    this.messageList!.appendChild(messageEl);
+    const row = document.createElement('div');
+    row.classList.add('chat-message-row', role);
+
+    const avatar = document.createElement('span');
+    avatar.classList.add('chat-avatar');
+    avatar.textContent = role === 'user' ? USER_AVATAR : BOT_AVATAR;
+
+    const bubble = document.createElement('div');
+    bubble.classList.add('chat-message', role);
+
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+    this.messageList!.appendChild(row);
     this.messageList!.scrollTop = this.messageList!.scrollHeight;
 
-    if (role === 'assistant' && text !== '...') {
+    if (role === 'assistant') {
       this.activeTypewriter = new Typewriter({
-        element: messageEl,
+        element: bubble,
         text,
         speed: 20,
       });
       this.activeTypewriter.init();
     } else {
-      messageEl.textContent = text;
+      bubble.textContent = text;
     }
 
-    return messageEl;
+    return row;
   }
 
   private open(): void {
@@ -189,6 +238,7 @@ export class ChatWidget {
     }
     this.activeTypewriter = null;
     this.isLoading = false;
+    this.clearLoadingDots();
 
     if (this.escapeHandler) {
       document.removeEventListener('keydown', this.escapeHandler);
