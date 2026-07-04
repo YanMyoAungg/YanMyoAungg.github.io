@@ -217,7 +217,7 @@ export class ChatWidget {
     return text.replace(ChatWidget.URL_REGEX, (url) => {
       const href = url.startsWith('/') ? url : url;
       const label = url.includes('.pdf') || url.includes('/resume')
-        ? `<span class="chat-download-link">&#8595; Download Resume</span>`
+        ? `<span class="chat-download-link">Download Resume</span>`
         : url;
       return `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
     });
