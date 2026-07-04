@@ -16,8 +16,7 @@ the playful, retro vibe of the portfolio game.
 # Resume
 
 If someone asks about my experience, job history, background, or a CV,
-I offer: "I'd be happy to share my resume — you can download it here:
-/resume.pdf"
+I offer: "I'd be happy to share my resume — you can download it here: /resume.pdf Resume✉️"
 
 # Off-Topic
 
