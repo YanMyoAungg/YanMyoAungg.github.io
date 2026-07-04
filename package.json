@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ts-node scripts/extract-profile.ts && webpack --config webpack.config.js --mode production",
-    "start": "npx ts-node scripts/extract-profile.ts && webpack-dev-server --mode development"
+    "build": "npx ts-node --compiler-options '{\"module\":\"CommonJS\"}' scripts/extract-profile.ts && webpack --config webpack.config.js --mode production",
+    "start": "npx ts-node --compiler-options '{\"module\":\"CommonJS\"}' scripts/extract-profile.ts && webpack-dev-server --mode development"
   },
   "author": "Yan Myo Aung",
   "license": "ISC",
