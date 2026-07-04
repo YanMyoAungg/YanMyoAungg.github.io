@@ -297,7 +297,7 @@ export const outside = {
               title: "PassionGeek (Feb 2026 - Present)",
               textLines: [
                 `PassionGeek is a software company focused on building modern digital solutions and applications.`,
-                `As a Full-Stack Developer at PassionGeek, I build modern web applications across the entire stack using React, Next.js, and TypeScript on the frontend and NestJS on the backend, from database design to deployment.`,
+                `As a Frontend Developer at PassionGeek, I develop modern web applications using React, Next.js, and TypeScript while collaborating closely with backend engineers and designers.`,
               ],
             },
             {
