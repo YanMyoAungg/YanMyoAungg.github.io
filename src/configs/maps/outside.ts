@@ -213,7 +213,7 @@ export const outside = {
           events: [
             {
               type: "message",
-              text: `Professor: Hi Yan Myo Aung, you're back! I kept your Computer Science Degree around. Let me see...`,
+              text: `Professor: Hi Yan Myo Aung! I've been keeping an eye on your NCC Education progress. Your L5DC is going well!`,
             },
             {
               type: "message",
@@ -222,7 +222,7 @@ export const outside = {
             {
               type: "interactionBox",
               title:
-                "Computer Science Degree — NCC Education, Greenwich University",
+                "NCC Education — L5DC (In Progress) | L4DC Diploma (Completed)",
               textLines: [
                 `- Software Engineering`,
                 `- Data Structures & Algorithms`,
