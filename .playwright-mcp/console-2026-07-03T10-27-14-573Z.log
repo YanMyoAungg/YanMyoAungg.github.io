@@ -8,3 +8,28 @@
 [   62364ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?5937308aed0664b395ef:6773
 [   62365ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?5937308aed0664b395ef:8379
 [   65465ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[  194470ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?5937308aed0664b395ef:6773
+[  194471ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?5937308aed0664b395ef:6773
+[19516805ms] [INFO] [webpack-dev-server] App updated. Recompiling... @ http://localhost:3004/bundle.js?5937308aed0664b395ef:6773
+[19517075ms] [INFO] [webpack-dev-server] App hot update... @ http://localhost:3004/bundle.js?5937308aed0664b395ef:6773
+[19517075ms] [LOG] [HMR] Checking for updates on the server... @ http://localhost:3004/bundle.js?5937308aed0664b395ef:8379
+[19517086ms] [WARNING] [HMR] Cannot apply update. Need to do a full reload! @ http://localhost:3004/bundle.js?5937308aed0664b395ef:8381
+[19517086ms] [WARNING] [HMR] Error: Aborted because ./src/index.ts is not accepted
+Update propagation: ./src/index.ts
+    at applyHandler (http://localhost:3004/bundle.js?5937308aed0664b395ef:9240:31)
+    at http://localhost:3004/bundle.js?5937308aed0664b395ef:8925:21
+    at Array.map (<anonymous>)
+    at internalApply (http://localhost:3004/bundle.js?5937308aed0664b395ef:8924:15)
+    at http://localhost:3004/bundle.js?5937308aed0664b395ef:8893:26
+    at waitForBlockingPromises (http://localhost:3004/bundle.js?5937308aed0664b395ef:8844:48)
+    at http://localhost:3004/bundle.js?5937308aed0664b395ef:8891:24 @ http://localhost:3004/bundle.js?5937308aed0664b395ef:8381
+[19517200ms] [INFO] [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled. @ http://localhost:3004/bundle.js?d31d4f35f8056dc31770:6773
+[19517200ms] [LOG] [HMR] Waiting for update signal from WDS... @ http://localhost:3004/bundle.js?d31d4f35f8056dc31770:8379
+[19517243ms] ReferenceError: __OPENROUTER_API_KEY__ is not defined
+    at ./src/index.ts (http://localhost:3004/bundle.js?d31d4f35f8056dc31770:3633:13)
+    at __webpack_require__ (http://localhost:3004/bundle.js?d31d4f35f8056dc31770:8464:32)
+    at http://localhost:3004/bundle.js?d31d4f35f8056dc31770:9603:37
+    at http://localhost:3004/bundle.js?d31d4f35f8056dc31770:9605:12
+[19520249ms] [WARNING] The resource http://localhost:3004/images/interfaces/sound.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3004/:0
+[25714308ms] [INFO] [webpack-dev-server] Disconnected! @ http://localhost:3004/bundle.js?d31d4f35f8056dc31770:6773
+[25714308ms] [INFO] [webpack-dev-server] Trying to reconnect... @ http://localhost:3004/bundle.js?d31d4f35f8056dc31770:6773
