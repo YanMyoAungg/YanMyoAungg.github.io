@@ -213,12 +213,13 @@ export class ChatWidget {
   }
 
   private linkifyUrls(text: string): string {
-    // Reset state first
     ChatWidget.URL_REGEX.lastIndex = 0;
     return text.replace(ChatWidget.URL_REGEX, (url) => {
-      // Normalize relative paths to absolute URLs
       const href = url.startsWith('/') ? url : url;
-      return `<a href="${href}" target="_blank" rel="noopener">${url}</a>`;
+      const label = url.includes('.pdf') || url.includes('/resume')
+        ? `<span class="chat-download-link">&#8595; Download Resume</span>`
+        : url;
+      return `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
     });
   }
 
