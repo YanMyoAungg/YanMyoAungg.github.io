@@ -376,14 +376,14 @@ export const outside = {
               title: "G-Next (May 2024 - Jan 2026)",
               textLines: [
                 `G-Next is a Japanese software company that develops modern web applications and digital solutions for clients across various industries.`,
-                `As a React / Next.js Developer at G-Next, I developed and maintained frontend applications using React and Next.js, delivering high-quality user interfaces for clients.`,
+                `As a Junior React Developer at G-Next, I developed and maintained frontend applications using React and Next.js, delivering high-quality user interfaces for clients.`,
               ],
             },
             {
               type: "interactionBox",
               title: "G-Next (May 2024 - Jan 2026)",
               textLines: [
-                `In addition to frontend development, I occasionally contributed to backend services using NestJS, giving me valuable experience working across the full stack and collaborating with cross-functional teams.`,
+                `I also occasionally contributed to backend services using NestJS, which gave me valuable exposure to the full stack and experience collaborating with cross-functional teams.`,
               ],
             },
           ],
