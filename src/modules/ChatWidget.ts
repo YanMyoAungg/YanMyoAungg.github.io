@@ -1,6 +1,6 @@
-import { Typewriter } from './Typewriter';
-import { ChatApi } from '../utils/chatApi';
-import { ChatWidgetConfig } from '../types/Chat';
+import { Typewriter } from "./Typewriter";
+import { ChatApi, ProfileData } from "../utils/chatApi";
+import { ChatWidgetConfig } from "../types/Chat";
 
 export class ChatWidget {
   private chatApi: ChatApi;
@@ -19,7 +19,8 @@ export class ChatWidget {
   constructor(config: ChatWidgetConfig) {
     this.chatApi = new ChatApi(
       config.apiKey,
-      config.profileContent,
+      config.profileCustomContent,
+      config.profileData as ProfileData | null,
       config.model,
     );
     this.gameContainer = config.gameContainer;
@@ -40,21 +41,24 @@ export class ChatWidget {
   }
 
   private createFloatingIcon(): void {
-    this.floatingIcon = document.createElement('div');
-    this.floatingIcon.classList.add('chat-floating-icon');
-    this.floatingIcon.textContent = '\u{1F4AC}';
-    this.floatingIcon.addEventListener('click', () => this.open());
+    this.floatingIcon = document.createElement("div");
+    this.floatingIcon.classList.add("chat-floating-icon");
+    this.floatingIcon.textContent = "\u{1F4AC}";
+    this.floatingIcon.addEventListener("click", () => this.open());
     this.gameContainer.appendChild(this.floatingIcon);
   }
 
   private createOverlay(): void {
-    this.chatOverlay = document.createElement('div');
-    this.chatOverlay.classList.add('chat-overlay');
+    this.chatOverlay = document.createElement("div");
+    this.chatOverlay.classList.add("chat-overlay");
 
     this.chatOverlay.innerHTML = `
       <div class="chat-overlay-header">
         <span>Ask Me Anything</span>
-        <button class="chat-close-button message-button">X</button>
+        <div class="chat-header-actions">
+          <a class="chat-resume-button" href="/resume.pdf" target="_blank" title="Download Resume (PDF)">📎</a>
+          <button class="chat-close-button message-button">X</button>
+        </div>
       </div>
       <div class="chat-message-list"></div>
       <div class="chat-input-container">
@@ -64,37 +68,49 @@ export class ChatWidget {
     `;
 
     this.messageList = this.chatOverlay.querySelector(
-      '.chat-message-list',
+      ".chat-message-list",
     ) as HTMLElement;
     this.inputField = this.chatOverlay.querySelector(
-      '.chat-input',
+      ".chat-input",
     ) as HTMLInputElement;
-    this.sendButton = this.chatOverlay.querySelector('.chat-send-button');
+    this.sendButton = this.chatOverlay.querySelector(".chat-send-button");
 
-    const closeButton = this.chatOverlay.querySelector('.chat-close-button');
-    closeButton!.addEventListener('click', () => this.close());
+    const closeButton = this.chatOverlay.querySelector(".chat-close-button");
+    closeButton!.addEventListener("click", () => this.close());
 
-    this.sendButton!.addEventListener('click', () => this.handleSend());
+    this.sendButton!.addEventListener("click", () => this.handleSend());
 
-    this.inputField.addEventListener('keypress', (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
+    this.inputField.addEventListener("keypress", (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
         e.preventDefault();
         this.handleSend();
       }
       // Prevent spacebar from triggering game interactions (InteractionInput listens on keypress)
-      if (e.key === ' ') {
+      if (e.key === " ") {
         e.stopPropagation();
       }
     });
 
-    this.inputField.addEventListener('keydown', (e: KeyboardEvent) => {
+    this.inputField.addEventListener("keydown", (e: KeyboardEvent) => {
       // Prevent WASD/arrow keys from triggering game movement while typing
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd', ' '].includes(e.key)) {
+      if (
+        [
+          "ArrowUp",
+          "ArrowDown",
+          "ArrowLeft",
+          "ArrowRight",
+          "w",
+          "a",
+          "s",
+          "d",
+          " ",
+        ].includes(e.key)
+      ) {
         e.stopPropagation();
       }
     });
 
-    this.chatOverlay.addEventListener('click', (e: MouseEvent) => {
+    this.chatOverlay.addEventListener("click", (e: MouseEvent) => {
       if (e.target === this.chatOverlay) {
         this.close();
       }
@@ -115,16 +131,16 @@ export class ChatWidget {
     this.isLoading = true;
     this.setInputEnabled(false);
 
-    this.addMessage(text, 'user');
-    this.inputField!.value = '';
+    this.addMessage(text, "user");
+    this.inputField!.value = "";
 
-    const loadingMsg = this.addMessage('...', 'assistant', false);
-    loadingMsg.style.minWidth = '4ch';
-    loadingMsg.style.whiteSpace = 'nowrap';
+    const loadingMsg = this.addMessage("...", "assistant", false);
+    loadingMsg.style.minWidth = "50px";
+    loadingMsg.style.textAlign = "left";
     let dotCount = 1;
     this.loadingDotsInterval = setInterval(() => {
-      dotCount = dotCount % 3 + 1;
-      loadingMsg.textContent = '.'.repeat(dotCount);
+      dotCount = (dotCount % 3) + 1;
+      loadingMsg.textContent = ".".repeat(dotCount);
     }, 400);
 
     this.chatApi
@@ -132,12 +148,12 @@ export class ChatWidget {
       .then((response) => {
         this.stopLoadingDots();
         loadingMsg.remove();
-        this.addMessage(response, 'assistant');
+        this.addMessage(response, "assistant");
       })
       .catch((error) => {
         this.stopLoadingDots();
         loadingMsg.remove();
-        this.addMessage(error.message, 'assistant', false);
+        this.addMessage(error.message, "assistant", false);
       })
       .finally(() => {
         this.isLoading = false;
@@ -164,15 +180,15 @@ export class ChatWidget {
 
   private addMessage(
     text: string,
-    role: 'user' | 'assistant',
+    role: "user" | "assistant",
     animate: boolean = true,
   ): HTMLElement {
-    const messageEl = document.createElement('p');
-    messageEl.classList.add('chat-message', role);
+    const messageEl = document.createElement("p");
+    messageEl.classList.add("chat-message", role);
     this.messageList!.appendChild(messageEl);
     this.messageList!.scrollTop = this.messageList!.scrollHeight;
 
-    if (role === 'assistant' && animate) {
+    if (role === "assistant" && animate) {
       this.activeTypewriter = new Typewriter({
         element: messageEl,
         text,
@@ -190,19 +206,19 @@ export class ChatWidget {
     if (this.isOpen) return;
     this.isOpen = true;
 
-    this.floatingIcon!.style.display = 'none';
+    this.floatingIcon!.style.display = "none";
 
     this.createOverlay();
     this.gameContainer.appendChild(this.chatOverlay!);
 
     this.escapeHandler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         this.close();
       }
     };
-    document.addEventListener('keydown', this.escapeHandler);
+    document.addEventListener("keydown", this.escapeHandler);
 
-    document.dispatchEvent(new CustomEvent('ChatOpened'));
+    document.dispatchEvent(new CustomEvent("ChatOpened"));
 
     setTimeout(() => this.inputField!.focus(), 100);
   }
@@ -219,7 +235,7 @@ export class ChatWidget {
     this.stopLoadingDots();
 
     if (this.escapeHandler) {
-      document.removeEventListener('keydown', this.escapeHandler);
+      document.removeEventListener("keydown", this.escapeHandler);
       this.escapeHandler = null;
     }
 
@@ -233,8 +249,8 @@ export class ChatWidget {
 
     this.chatApi.clearHistory();
 
-    this.floatingIcon!.style.display = '';
+    this.floatingIcon!.style.display = "";
 
-    document.dispatchEvent(new CustomEvent('ChatClosed'));
+    document.dispatchEvent(new CustomEvent("ChatClosed"));
   }
 }

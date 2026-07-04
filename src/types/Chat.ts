@@ -20,7 +20,8 @@ export interface OpenRouterResponse {
 }
 
 export interface ChatWidgetConfig {
-  profileContent: string;
+  profileCustomContent: string;
+  profileData: Record<string, unknown>;
   apiKey: string;
   gameContainer: HTMLElement;
   model?: string;

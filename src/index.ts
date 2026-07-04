@@ -1,7 +1,8 @@
 import Engine from './modules/Engine';
 import { ChatWidget } from './modules/ChatWidget';
 import { OPENROUTER_API_KEY as FILE_API_KEY } from './configs/apiKey';
-import profileContent from './configs/profile.md';
+import profileCustomContent from './configs/profile.custom.md';
+import profileData from './configs/profile.json';
 
 // __OPENROUTER_API_KEY__ is replaced by Webpack DefinePlugin at build time.
 // In CI, it comes from the OPENROUTER_API_KEY secret. Locally, it's empty
@@ -14,7 +15,8 @@ engine.init();
 const gameContainer = document.getElementById('canvas-container') as HTMLElement;
 
 const chatWidget = new ChatWidget({
-  profileContent,
+  profileCustomContent,
+  profileData,
   apiKey: __OPENROUTER_API_KEY__ || FILE_API_KEY,
   gameContainer,
 });
