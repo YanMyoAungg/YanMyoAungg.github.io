@@ -79,11 +79,15 @@ export class ChatWidget {
         e.preventDefault();
         this.handleSend();
       }
+      // Prevent spacebar from triggering game interactions (InteractionInput listens on keypress)
+      if (e.key === ' ') {
+        e.stopPropagation();
+      }
     });
 
     this.inputField.addEventListener('keydown', (e: KeyboardEvent) => {
       // Prevent WASD/arrow keys from triggering game movement while typing
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd'].includes(e.key)) {
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'w', 'a', 's', 'd', ' '].includes(e.key)) {
         e.stopPropagation();
       }
     });
