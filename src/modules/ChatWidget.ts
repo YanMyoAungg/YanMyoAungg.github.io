@@ -14,6 +14,7 @@ export class ChatWidget {
   private isOpen: boolean;
   private isLoading: boolean;
   private escapeHandler: ((e: KeyboardEvent) => void) | null;
+  private loadingDotsInterval: ReturnType<typeof setInterval> | null;
 
   constructor(config: ChatWidgetConfig) {
     this.chatApi = new ChatApi(
@@ -31,6 +32,7 @@ export class ChatWidget {
     this.isOpen = false;
     this.isLoading = false;
     this.escapeHandler = null;
+    this.loadingDotsInterval = null;
   }
 
   public init(): void {
@@ -108,6 +110,7 @@ export class ChatWidget {
     if (this.activeTypewriter && !this.activeTypewriter.isDone) {
       this.activeTypewriter.warpToDone();
     }
+    this.stopLoadingDots();
 
     this.isLoading = true;
     this.setInputEnabled(false);
@@ -115,23 +118,37 @@ export class ChatWidget {
     this.addMessage(text, 'user');
     this.inputField!.value = '';
 
-    const loadingMsg = this.addMessage('...', 'assistant');
+    const loadingMsg = this.addMessage('.', 'assistant', false);
+    let dotCount = 1;
+    this.loadingDotsInterval = setInterval(() => {
+      dotCount = dotCount % 3 + 1;
+      loadingMsg.textContent = '.'.repeat(dotCount);
+    }, 400);
 
     this.chatApi
       .sendMessage(text)
       .then((response) => {
+        this.stopLoadingDots();
         loadingMsg.remove();
         this.addMessage(response, 'assistant');
       })
       .catch((error) => {
+        this.stopLoadingDots();
         loadingMsg.remove();
-        this.addMessage(error.message, 'assistant');
+        this.addMessage(error.message, 'assistant', false);
       })
       .finally(() => {
         this.isLoading = false;
         this.setInputEnabled(true);
         this.inputField!.focus();
       });
+  }
+
+  private stopLoadingDots(): void {
+    if (this.loadingDotsInterval) {
+      clearInterval(this.loadingDotsInterval);
+      this.loadingDotsInterval = null;
+    }
   }
 
   private setInputEnabled(enabled: boolean): void {
@@ -143,13 +160,17 @@ export class ChatWidget {
     }
   }
 
-  private addMessage(text: string, role: 'user' | 'assistant'): HTMLElement {
+  private addMessage(
+    text: string,
+    role: 'user' | 'assistant',
+    animate: boolean = true,
+  ): HTMLElement {
     const messageEl = document.createElement('p');
     messageEl.classList.add('chat-message', role);
     this.messageList!.appendChild(messageEl);
     this.messageList!.scrollTop = this.messageList!.scrollHeight;
 
-    if (role === 'assistant' && text !== '...') {
+    if (role === 'assistant' && animate) {
       this.activeTypewriter = new Typewriter({
         element: messageEl,
         text,
@@ -193,6 +214,7 @@ export class ChatWidget {
     }
     this.activeTypewriter = null;
     this.isLoading = false;
+    this.stopLoadingDots();
 
     if (this.escapeHandler) {
       document.removeEventListener('keydown', this.escapeHandler);
