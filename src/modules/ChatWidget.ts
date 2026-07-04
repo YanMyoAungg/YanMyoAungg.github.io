@@ -119,8 +119,8 @@ export class ChatWidget {
     this.inputField!.value = '';
 
     const loadingMsg = this.addMessage('...', 'assistant', false);
-    loadingMsg.style.width = '4ch';
-    loadingMsg.style.textAlign = 'left';
+    loadingMsg.style.minWidth = '4ch';
+    loadingMsg.style.whiteSpace = 'nowrap';
     let dotCount = 1;
     this.loadingDotsInterval = setInterval(() => {
       dotCount = dotCount % 3 + 1;
