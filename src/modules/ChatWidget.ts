@@ -178,6 +178,9 @@ export class ChatWidget {
     }
   }
 
+  private static readonly URL_REGEX =
+    /(https?:\/\/[^\s]+|(?<!\w)\/[^\s]*\.pdf(?:\?[^\s]*)?)/gi;
+
   private addMessage(
     text: string,
     role: "user" | "assistant",
@@ -188,18 +191,35 @@ export class ChatWidget {
     this.messageList!.appendChild(messageEl);
     this.messageList!.scrollTop = this.messageList!.scrollHeight;
 
-    if (role === "assistant" && animate) {
+    const hasUrl = ChatWidget.URL_REGEX.test(text);
+    // Reset lastIndex since test() advances it
+    ChatWidget.URL_REGEX.lastIndex = 0;
+
+    if (role === "assistant" && animate && !hasUrl) {
       this.activeTypewriter = new Typewriter({
         element: messageEl,
         text,
         speed: 20,
       });
       this.activeTypewriter.init();
+    } else if (hasUrl) {
+      // Render URLs as clickable links
+      messageEl.innerHTML = this.linkifyUrls(text);
     } else {
       messageEl.textContent = text;
     }
 
     return messageEl;
+  }
+
+  private linkifyUrls(text: string): string {
+    // Reset state first
+    ChatWidget.URL_REGEX.lastIndex = 0;
+    return text.replace(ChatWidget.URL_REGEX, (url) => {
+      // Normalize relative paths to absolute URLs
+      const href = url.startsWith('/') ? url : url;
+      return `<a href="${href}" target="_blank" rel="noopener">${url}</a>`;
+    });
   }
 
   private open(): void {
