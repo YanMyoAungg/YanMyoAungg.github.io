@@ -1,12 +1,19 @@
 import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Chat';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-// 'openrouter/free' auto-routes to any available free model.
-// The free model lineup changes frequently — if responses degrade,
-// pick a specific model from: curl -s https://openrouter.ai/api/v1/models
 const DEFAULT_MODEL = 'openrouter/free';
 const MAX_HISTORY = 10;
 const REQUEST_TIMEOUT_MS = 15_000;
+
+export interface ProfileData {
+  identity?: { text: string }[];
+  skills?: { name: string }[];
+  experience?: { company: string; description: string; role?: string; dates?: string }[];
+  education?: { program: string; status: string; details?: string[] }[];
+  projects?: { name: string; description: string }[];
+  personal?: { text: string }[];
+  links?: { url: string }[];
+}
 
 // NOTE: The API key is embedded in client-side JS since this is a static
 // portfolio with no backend. Use a restricted-scope key from OpenRouter
@@ -17,31 +24,82 @@ export class ChatApi {
   private history: ChatMessage[];
   private systemMessage: ChatMessage;
 
-  constructor(apiKey: string, profileContent: string, model?: string) {
+  constructor(apiKey: string, profileCustom: string, profileData: ProfileData | null, model?: string) {
     this.apiKey = apiKey;
     this.model = model || DEFAULT_MODEL;
     this.history = [];
-    this.systemMessage = this.buildSystemMessage(profileContent);
+    this.systemMessage = this.buildSystemMessage(profileCustom, profileData);
   }
 
-  private buildSystemMessage(profileContent: string): ChatMessage {
+  private formatProfileFacts(data: ProfileData): string {
+    const lines: string[] = [];
+
+    if (data.skills && data.skills.length > 0) {
+      lines.push('SKILLS:');
+      lines.push(data.skills.map(s => `  - ${s.name}`).join('\n'));
+    }
+
+    if (data.experience && data.experience.length > 0) {
+      lines.push('\nEXPERIENCE:');
+      for (const exp of data.experience) {
+        const roleLine = exp.role ? ` — ${exp.role}` : '';
+        const datesLine = exp.dates ? ` (${exp.dates})` : '';
+        lines.push(`  ${exp.company}${roleLine}${datesLine}`);
+        lines.push(`    ${exp.description}`);
+      }
+    }
+
+    if (data.education && data.education.length > 0) {
+      lines.push('\nEDUCATION:');
+      for (const edu of data.education) {
+        lines.push(`  ${edu.program}`);
+        lines.push(`    Status: ${edu.status}`);
+        if (edu.details) {
+          for (const detail of edu.details) {
+            lines.push(`    ${detail}`);
+          }
+        }
+      }
+    }
+
+    if (data.projects && data.projects.length > 0) {
+      lines.push('\nPROJECTS:');
+      for (const proj of data.projects) {
+        lines.push(`  ${proj.name}: ${proj.description}`);
+      }
+    }
+
+    if (data.personal && data.personal.length > 0) {
+      lines.push('\nPERSONAL FACTS:');
+      for (const p of data.personal) {
+        lines.push(`  - ${p.text}`);
+      }
+    }
+
+    if (data.links && data.links.length > 0) {
+      lines.push('\nLINKS:');
+      for (const link of data.links) {
+        lines.push(`  ${link.url}`);
+      }
+    }
+
+    return lines.join('\n');
+  }
+
+  private buildSystemMessage(profileCustom: string, profileData: ProfileData | null): ChatMessage {
+    const facts = profileData ? this.formatProfileFacts(profileData) : '';
+
+    const content = [
+      profileCustom,
+      '',
+      '---',
+      'FACTS ABOUT ME:',
+      facts,
+    ].join('\n');
+
     return {
       role: 'system',
-      content: [
-        'You are a portfolio assistant for Yan Myo Aung.',
-        'Answer ONLY using the profile below.',
-        'If the question is not related to this person\'s skills, experience, projects, education, or professional background, politely decline and suggest the visitor explore the portfolio instead.',
-        'Keep responses friendly, concise, and helpful.',
-        '',
-        'OFF-TOPIC QUESTIONS TO DECLINE:',
-        '- General knowledge ("What is the weather?", "Who is the president?")',
-        '- Code generation ("Write a function that...")',
-        '- Questions about other people or companies',
-        '- Requests to role-play or pretend to be someone else',
-        '',
-        'PROFILE:',
-        profileContent,
-      ].join('\n'),
+      content,
     };
   }
 
@@ -93,7 +151,6 @@ export class ChatApi {
           : 'Try again in a moment.';
         throw new Error(`The assistant is resting. ${waitTime}`);
       }
-      // 401 = bad API key, 404 = bad model — surface the status
       if (response.status === 401) {
         throw new Error('Invalid API key. Check your OpenRouter key in src/configs/apiKey.ts.');
       }
