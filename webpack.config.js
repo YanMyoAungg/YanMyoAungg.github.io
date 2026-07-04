@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        type: 'asset/source',
+        type: "asset/source",
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -56,6 +56,12 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [{ from: "src/sounds", to: "sounds" }],
+      options: {
+        concurrency: 100,
+      },
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "public/resume.pdf", to: "resume.pdf" }],
       options: {
         concurrency: 100,
       },
