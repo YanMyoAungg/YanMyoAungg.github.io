@@ -166,10 +166,11 @@ export class ChatApi {
       'Sorry, I could not generate a response.';
 
     // Some free models leak internal safety tags. Strip common prefixes.
-    // Also strip markdown that we can't render (plain-text chat widget).
+    // Also strip markdown we can't render (plain-text chat widget).
     const assistantMessage = rawMessage
       .replace(/^User\s+safety:\s*safe\.?\s*/i, '')
       .replace(/^\s*<thinking>[\s\S]*?<\/thinking>\s*/i, '')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1 ($2)')
       .replace(/\*{3}(.+?)\*{3}/g, '$1')
       .replace(/\*{2}(.+?)\*{2}/g, '$1')
       .replace(/_{2}(.+?)_{2}/g, '$1')
