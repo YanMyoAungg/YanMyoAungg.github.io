@@ -104,9 +104,15 @@ export class ChatApi {
     }
 
     const data: OpenRouterResponse = await response.json();
-    const assistantMessage =
+    const rawMessage =
       data.choices[0]?.message?.content ||
       'Sorry, I could not generate a response.';
+
+    // Some free models leak internal safety tags. Strip common prefixes.
+    const assistantMessage = rawMessage
+      .replace(/^User\s+safety:\s*safe\.?\s*/i, '')
+      .replace(/^\s*<thinking>[\s\S]*?<\/thinking>\s*/i, '')
+      .trim() || 'Sorry, I could not generate a response.';
 
     this.history.push({ role: 'user', content: trimmed });
     this.history.push({ role: 'assistant', content: assistantMessage });
