@@ -144,9 +144,9 @@ function buildProfile(): ProfileData {
         }
 
         // Check if title matches education
-        if (title.includes('Degree') || title.includes('Computer Science')) {
+        if (title.includes('NCC') || title.includes('L5DC') || title.includes('Degree') || title.includes('Computer Science')) {
           profile.education.push({
-            program: 'NCC Education (L5DC)',
+            program: 'NCC Education — L5DC (In Progress) | L4DC Diploma (Completed)',
             status: 'In progress — second year',
             details: interaction.texts,
           });
