@@ -43,7 +43,13 @@ export class ChatWidget {
   private createFloatingIcon(): void {
     this.floatingIcon = document.createElement("div");
     this.floatingIcon.classList.add("chat-floating-icon");
-    this.floatingIcon.textContent = "\u{1F4AC}";
+    const img = document.createElement("img");
+    img.src = "images/objects/speech_bubble.png";
+    img.alt = "Chat";
+    img.style.width = "32px";
+    img.style.height = "32px";
+    img.style.imageRendering = "pixelated";
+    this.floatingIcon.appendChild(img);
     this.floatingIcon.addEventListener("click", () => this.open());
     this.gameContainer.appendChild(this.floatingIcon);
   }
@@ -217,7 +223,7 @@ export class ChatWidget {
     ChatWidget.URL_REGEX.lastIndex = 0;
     return text.replace(ChatWidget.URL_REGEX, (url) => {
       // Normalize relative paths to absolute URLs
-      const href = url.startsWith('/') ? url : url;
+      const href = url.startsWith("/") ? url : url;
       return `<a href="${href}" target="_blank" rel="noopener">${url}</a>`;
     });
   }

@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom", "ESNext"
-    ],
+    "lib": ["dom", "ESNext"],
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
@@ -10,6 +8,7 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+  },
+  "include": ["src/**/*"],
 }

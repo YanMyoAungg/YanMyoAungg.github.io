@@ -5,7 +5,7 @@ import {
 } from "../types/Chat";
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
-const DEFAULT_MODEL = "openrouter/free";
+const DEFAULT_MODEL = "openai/gpt-4o-mini";
 const MAX_HISTORY = 10;
 const REQUEST_TIMEOUT_MS = 15_000;
 

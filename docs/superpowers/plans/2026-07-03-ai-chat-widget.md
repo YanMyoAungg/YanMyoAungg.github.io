@@ -331,7 +331,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 import { ChatMessage, OpenRouterRequest, OpenRouterResponse } from '../types/Chat';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const DEFAULT_MODEL = 'google/gemini-2.0-flash-001';
+const DEFAULT_MODEL = 'openai/gpt-4o-mini';
 
 export class ChatApi {
   private apiKey: string;

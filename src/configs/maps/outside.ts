@@ -915,7 +915,9 @@ export const outside = {
           isMobile ? "joystick" : "arrows"
         } to walk around and press ${
           isMobile ? "A" : "spacebar"
-        } to interact with objects.`;
+        } to interact with objects.
+
+Tap the speech bubble icon on the right to ask me anything!`;
       },
     },
   ],
